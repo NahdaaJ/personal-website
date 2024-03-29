@@ -1,0 +1,49 @@
+body {
+  margin-left: 200px;
+  background-color: #FFD9D9;
+  background-image: linear-gradient(90deg, #FFBDBD 1px, transparent 1px), /* Vertical lines */
+                        linear-gradient(0deg, #FFBDBD 1px, transparent 1px); /* Horizontal lines */
+      background-size: 50px 50px; /* Size of the grid cells */
+}
+
+h1 {
+  color: #EA9595;
+}
+
+h2, p {
+  color: #b04a4a;
+}
+
+
+.sidebar {
+  background-color: #EA9595;
+  height:100%;
+  width: 200px;
+  position: fixed;
+  top:0px;
+  left:0px;
+}
+
+/* @media (max-width: 600px) and (min-width: 360px) {
+  h1 {
+    color: red;
+  }
+} */
+
+@media (max-width: 1000px) and (min-width: 480px){
+  body {
+    margin-left: 60px;
+  }
+  .sidebar {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    margin: 0px;
+  }
+  .sidebar {
+    display: none;
+  }
+}
