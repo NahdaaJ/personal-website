@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beep Boop</title>
+  <style>
+    body {
+      height: 10000px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Buttons</h1>
+  <button class="add_to_list">Click me!</button>
+  <button class="clear_btn">Clear List</button>
+  <ul class="list-clicks">
+  </ul>
+
+  <script>
+    const addButton = document.querySelector('.add_to_list');
+    addButton.addEventListener('click', buttonPressed);
+
+    const clearButton = document.querySelector('.clear_btn');
+    clearButton.addEventListener('click', clearButtonPressed);
+
+    const clickList = document.querySelector('.list-clicks');
+    
+    const item = document.querySelector("h1");
+    item.addEventListener("scroll", function() {
+      clickList.innerHTML += "<li>Beeped ur last boop.</li>"
+    });
+    function clearButtonPressed() {
+      clickList.innerHTML = '';
+    }
+
+    function buttonPressed() {
+      currentDate = new Date();
+      clickList.innerHTML += `<li>Button clicked at ${currentDate} </li>`;
+    }
+  </script>
+</body>
+</html>
