@@ -2,6 +2,7 @@ body {
   height: 2000px;
   margin: 0; /* Reset margin */
   padding: 0; /* Reset padding */
+  font-family: 'Courier New', Courier, monospace;
 }
 nav {
   display: flex;
@@ -10,8 +11,44 @@ nav {
   left:0;
   right: 0;
   height: 100px;
-  background-color: rgba(255, 0, 0, 0.208);
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
+
+.nav-link {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0px 3%;
+  text-wrap: nowrap;
+  color: #b53a72;
+}
+
+.home-link-off{
+  display: none;
+}
+
+.home-link-on{
+  font-size: 70px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0px 3%;
+  text-wrap: nowrap;
+  color: #f27798;
+}
+
+.nav-link:hover {
+  color: #ffa1b0ff;
+  transition: color 0.5s;
+}
+
+.nav-link:not(hover) {
+  color: #b53a72;
+  transition: color 0.5s;
+}
+
+
 
 #homepage-content {
   padding-top: 100px;
