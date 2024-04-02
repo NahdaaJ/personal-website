@@ -1,3 +1,27 @@
-.content span {
-  color: black;
+body {
+  height: 2000px;
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+}
+nav {
+  display: flex;
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+  height: 100px;
+  background-color: rgba(255, 0, 0, 0.208);
+}
+
+#homepage-content {
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(11, minmax(100px, 200px));
+  grid-template-rows: repeat(15, 6vh);
+  background-color: #ffe4e4ff;
+
+  background-image: 
+        linear-gradient(90deg, #fff2f2 1px, transparent 1px), /* Vertical lines */
+        linear-gradient(0deg, #fff2f2 1px, transparent 1px); /* Horizontal lines */
+    background-size: 50px 50px; /* Size of the grid cells */
 }
