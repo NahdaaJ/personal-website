@@ -39,5 +39,5 @@ container.addEventListener('scroll', function(){
   } else {
     navBar.setAttribute("homepage-nav", "false");
   }
-  navBar.removeAttribute("initial-load")
+  navBar.removeAttribute("initial-load");
 });
