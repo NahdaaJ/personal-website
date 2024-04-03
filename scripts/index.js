@@ -13,6 +13,22 @@ container.addEventListener('wheel', (event) => {
   });
 });
 
+container.addEventListener('keydown', (event) => {
+  const scrollAmount = 0;
+
+  if (event.key == "ArrowUp") {
+    scrollAmount = 500;
+  }
+  else if (event.key == "ArrowDown") {
+    scrollAmount = -500;
+  };
+
+  container.scrollBy({
+    top: scrollAmount,
+    behavior: "smooth"
+  });
+});
+
 container.addEventListener('scroll', function(){
   const homepageSection = document.querySelector('[is-homepage="true"]');
   const isHomepage = homepageSection.getBoundingClientRect().top === 0;

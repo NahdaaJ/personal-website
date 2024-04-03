@@ -8,33 +8,33 @@
 </head>
 <body>
   <div class="container">
-    <nav homepage-nav="true">
+    <nav homepage-nav="true" role="navigation">
       <div id="nav-links">
-        <a class="nav-link" href="#section-about-me">About Me</a>
-        <a class="nav-link" href="#section-experience">Experience</a>
-        <a class="nav-link" href="#">Projects</a>
-        <a class="nav-link" href="#">Contact</a>
+        <a role="link" class="nav-link" href="#section-about-me">About Me</a>
+        <a role="link" class="nav-link" href="#section-experience">Experience</a>
+        <a role="link" class="nav-link" href="#">Projects</a>
+        <a role="link" class="nav-link" href="#">Contact</a>
       </div>
-      <a id="logo" href="#section-homepage">NJ</a>
+      <a role="link" id="logo" href="#section-homepage">NJ</a>
     </nav>
 
-    <section class="section" id="section-homepage" is-homepage="true">
-      <div id="homepage-content">
-        Homepage Content
-      </div>
-    </section>
+    <main role="main">
+      <section class="section" id="section-homepage" is-homepage="true">
+        <div id="homepage-content">
+        </div>
+      </section>
 
-    <section class="section" id="section-about-me" is-homepage="false">
-      <div id="">
-        About Me Content
-      </div>
-    </section>
+      <section class="section" id="section-about-me" is-homepage="false">
+        <div id="">
+        </div>
+      </section>
 
-    <section class="section" id="section-experience" is-homepage="false">
-      <div id="">
-        Experience Content
-      </div>
-    </section>
+      <section class="section" id="section-experience" is-homepage="false">
+        <div id="">
+        </div>
+      </section>
+    </main>
+
   </div>
   <script src="scripts/index.js"></script>
 </body>
