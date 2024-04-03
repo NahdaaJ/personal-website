@@ -43,10 +43,9 @@ nav {
   color: #b53a72;
   min-width: fit-content;
   transition: color 0.5s ease;
-  /* padding: 0px 1% 0px 1%; */
 }
 
-.nav-link:hover {
+.nav-link:hover, #logo:hover {
   color: #ffa1b0ff;
 }
 
@@ -55,6 +54,7 @@ nav {
   text-decoration: none;
   color: #b53a72;
   font-weight: bold;
+  transition: color 0.5s ease;
 }
 
 @keyframes bigNav {
@@ -103,59 +103,20 @@ nav {
     background-size: 50px 50px; /* Size of the grid cells */
 }
 
-#section-about-me {
-  background: rgb(255, 149, 149);
-}
-
 #homepage-content {
   display: grid;
   grid-template-columns: repeat(11, minmax(100px, 200px));
   grid-template-rows: repeat(15, 6vh);
-
-}
-/* nav {
-  display: flex;
-  position: fixed;
-  top:0;
-  left:0;
-  right: 0;
-  height: 100px;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
 }
 
-.nav-link {
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 0px 3%;
-  text-wrap: nowrap;
-  color: #b53a72;
+#section-about-me {
+  background: rgb(255, 149, 149);
 }
 
-.home-link-off{
-  display: none;
+#section-projects{
+  background: rgb(255, 237, 237);
 }
 
-.home-link-on{
-  font-size: 70px;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 0px 3%;
-  text-wrap: nowrap;
-  color: #f27798;
+#section-about-me {
+  background: rgb(255, 149, 149);
 }
-
-.nav-link:hover {
-  color: #ffa1b0ff;
-  transition: color 0.5s;
-}
-
-.nav-link:not(hover) {
-  color: #b53a72;
-  transition: color 0.5s;
-} */
-
-
-
