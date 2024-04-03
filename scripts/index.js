@@ -29,6 +29,7 @@ container.addEventListener('keydown', (event) => {
   });
 });
 
+
 container.addEventListener('scroll', function(){
   const homepageSection = document.querySelector('[is-homepage="true"]');
   const isHomepage = homepageSection.getBoundingClientRect().top === 0;
@@ -38,4 +39,5 @@ container.addEventListener('scroll', function(){
   } else {
     navBar.setAttribute("homepage-nav", "false");
   }
+  navBar.removeAttribute("initial-load")
 });

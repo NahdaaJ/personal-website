@@ -27,7 +27,10 @@ nav {
   right: 0;
   height: 100px;
   padding-top:20px;
+}
 
+[initial-load="true"] #logo {
+  display: none;
 }
 
 #nav-links {
