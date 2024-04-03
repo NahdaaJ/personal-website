@@ -7,25 +7,35 @@
   <title>Home</title>
 </head>
 <body>
-  <nav>
-      <a class="nav-link" href="#">About Me</a>
-      <a class="nav-link" href="#">Experience</a>
-      <a class="home-link-off" href="#">NJ</a>
-      <a class="nav-link" href="#">Projects</a>
-      <a class="nav-link" href="#">Contact</a>
-  </nav>
+  <div class="container">
+    <nav homepage-nav="true">
+      <div id="nav-links">
+        <a class="nav-link" href="#section-about-me">About Me</a>
+        <a class="nav-link" href="#section-experience">Experience</a>
+        <a class="nav-link" href="#">Projects</a>
+        <a class="nav-link" href="#">Contact</a>
+      </div>
+      <a id="logo" href="#section-homepage">NJ</a>
+    </nav>
 
-  <section id="section homepage">
-    <div id="homepage-content">
-    </div>
-  </section>
+    <section class="section" id="section-homepage" is-homepage="true">
+      <div id="homepage-content">
+        Homepage Content
+      </div>
+    </section>
 
-  <!-- <footer>
-    <div> Icons made by <a href="https://www.flaticon.com/authors/ariefstudio" title="ariefstudio"> ariefstudio </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
-  </footer> -->
+    <section class="section" id="section-about-me" is-homepage="false">
+      <div id="">
+        About Me Content
+      </div>
+    </section>
 
+    <section class="section" id="section-experience" is-homepage="false">
+      <div id="">
+        Experience Content
+      </div>
+    </section>
+  </div>
   <script src="scripts/index.js"></script>
 </body>
-
-
 </html>

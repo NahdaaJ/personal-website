@@ -1,10 +1,101 @@
 body {
-  height: 2000px;
   margin: 0; /* Reset margin */
   padding: 0; /* Reset padding */
   font-family: 'Courier New', Courier, monospace;
 }
+
+.container {
+  height: 100vh;
+  overflow-y: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
 nav {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+}
+
+@keyframes bigNav {
+  0% {
+    margin-left: 0px;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 50vw;
+    opacity: 1;
+  }
+}
+
+@keyframes reverseNav {
+  0% {
+    margin-left: 50vw;
+    opacity: 1;
+
+  }
+  70% {
+    width:0px;
+    font-size: 0px;
+  }
+  100% {
+    margin-left: 0px;
+    opacity: 0;
+    width:0px;
+    font-size: 0px;
+    display: none;
+  }
+}
+
+[homepage-nav="true"] > a {
+  animation: reverseNav 1s ease forwards;
+}
+
+[homepage-nav="false"] > a {
+  margin-left:50vw;
+  animation: bigNav 1s ease;
+}
+
+#logo {
+  font-size: 60px;
+}
+
+
+
+
+
+#section-homepage{
+  background-color: #ffe4e4ff;
+  height: 100vh;
+
+  background-image: 
+        linear-gradient(90deg, #fff2f2 1px, transparent 1px), /* Vertical lines */
+        linear-gradient(0deg, #fff2f2 1px, transparent 1px); /* Horizontal lines */
+    background-size: 50px 50px; /* Size of the grid cells */
+}
+
+#section-about-me {
+  background: rgb(255, 149, 149);
+}
+
+#homepage-content {
+  display: grid;
+  grid-template-columns: repeat(11, minmax(100px, 200px));
+  grid-template-rows: repeat(15, 6vh);
+
+}
+/* nav {
   display: flex;
   position: fixed;
   top:0;
@@ -46,19 +137,7 @@ nav {
 .nav-link:not(hover) {
   color: #b53a72;
   transition: color 0.5s;
-}
+} */
 
 
 
-#homepage-content {
-  padding-top: 100px;
-  display: grid;
-  grid-template-columns: repeat(11, minmax(100px, 200px));
-  grid-template-rows: repeat(15, 6vh);
-  background-color: #ffe4e4ff;
-
-  background-image: 
-        linear-gradient(90deg, #fff2f2 1px, transparent 1px), /* Vertical lines */
-        linear-gradient(0deg, #fff2f2 1px, transparent 1px); /* Horizontal lines */
-    background-size: 50px 50px; /* Size of the grid cells */
-}
