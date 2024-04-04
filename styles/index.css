@@ -64,12 +64,13 @@ nav {
 }
 
 #logo {
-  font-size: 80px;
-  font-family: "Phudu", sans-serif;
-  text-decoration: none;
-  color: #b53a72;
-  font-weight: bold;
   transition: color 0.5s ease;
+  display: flex;
+}
+
+#logo > img {
+  height: 80px;
+  align-items: center;
 }
 
 @keyframes bigNav {
@@ -78,7 +79,7 @@ nav {
     opacity: 0;
   }
   100% {
-    font-size: 80px;
+    height: 80px;
     margin-left: 40vw;
     opacity: 1;
   }
@@ -88,22 +89,22 @@ nav {
   0% {
     margin-left: 40vw;
     opacity: 1;
-    font-size: 80px;
+    height: 80px;
   }
 
   100% {
     margin-left: 0px;
     opacity: 0;
-    font-size: 0px;
+    height: 0px;
     display: none;
   }
 }
 
-[homepage-nav="true"] > a {
+[homepage-nav="true"] img {
   animation: reverseNav 1s ease forwards;
 }
 
-[homepage-nav="false"] > a {
+[homepage-nav="false"] img {
   margin-left:40vw;
   animation: bigNav 1s ease;
 }
@@ -173,6 +174,10 @@ nav {
   text-shadow: 0px 10px 0px #b53a72;
 }
 
+#homepage-mid-line > img {
+  height: 5vw;
+}
+
 
 @keyframes titleFloat {
   0% {
@@ -195,7 +200,7 @@ nav {
 }
 
 #homepage-bottom-line {
-  line-height: 4.5vw;
+  line-height: 3vw;
 }
 
 #download-cv-btn {
