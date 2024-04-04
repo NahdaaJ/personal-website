@@ -29,6 +29,13 @@ container.addEventListener('keydown', (event) => {
   });
 });
 
+function letsGoBtnClick() {
+  container.scrollBy({
+    top: 500,
+    behavior: "smooth"
+  });
+}
+
 
 container.addEventListener('scroll', function(){
   const homepageSection = document.querySelector('[is-homepage="true"]');

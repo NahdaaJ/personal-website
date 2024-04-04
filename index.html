@@ -5,14 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/index.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <title>Home</title>
 </head>
 <body>
   <div class="container">
     <nav initial-load="true" role="navigation">
       <div id="nav-links">
+        <h1 class="sr-visible">Hello. I'm Nahdaa Jawed, and I'm a software engineer.
+          Accessibility is important to me, so if you would like to toggle the accessible version of the webpage 
+          please press 'a'.
+        </h1>
         <a role="link" class="nav-link" href="#section-about-me">About Me</a>
         <a role="link" class="nav-link" href="#section-experience">Experience</a>
         <a role="link" class="nav-link" href="#section-projects">Projects</a>
@@ -24,16 +33,23 @@
     <main role="main">
       <section class="section" id="section-homepage" is-homepage="true">
         <div id="homepage-content">
+
           <div id="homepage-cartoon">
             <img id="cartoon-me" src="images/pixel.png"/>
-            <img id="blob" src="images/blob.png"/>
+            <img id="blob" src="images/blob.png" aria-hidden="true"/>
           </div>
-          <div id="homepage-intro-text">
+
+
+          <div id="homepage-intro-text" aria-hidden="true">
             <div id="homepage-top-line">Hello! I'm</div>
             <div id="homepage-mid-line">Nahdaa Jawed</div>
-            <div id="homepage-bottom-line">and I'm a software engineer! (✿＾▽＾)</div>
-            <div id="download-cv-btn"><button>Download CV</button><button>Let's Go!</button></div>  
+            <div id="homepage-bottom-line">and I'm a software engineer! (✿＾▽＾)
           </div>
+          <div id="download-cv-btn">
+            <button>Download CV</button>
+            <button onclick="letsGoBtnClick()">Let's Go!</button>
+          </div>  
+        </div>
 
         </div>
       </section>

@@ -4,6 +4,17 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
+.sr-visible {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  margin: 0px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 .container {
   height: 100vh;
   overflow-y: hidden;
@@ -49,7 +60,7 @@ nav {
 }
 
 .nav-link:hover, #logo:hover {
-  color: #ffa1b0ff;
+  color: #ffa1b0;
 }
 
 #logo {
