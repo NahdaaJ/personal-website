@@ -54,6 +54,7 @@ nav {
 
 #logo {
   font-size: 80px;
+  font-family: "Phudu", sans-serif;
   text-decoration: none;
   color: #b53a72;
   font-weight: bold;
@@ -130,9 +131,18 @@ nav {
   grid-column: 3/ 6;
   align-self: center;
   justify-self: center;
+  position: relative;
 }
 
-#homepage-cartoon > img {
+#cartoon-me {
+  position: absolute;
+  height:25vw;
+  animation: cartoonFloat 5s infinite alternate ease-in-out;
+  z-index: 1;
+}
+
+#blob {
+  z-index: -1;
   height:25vw;
 }
 
@@ -143,9 +153,38 @@ nav {
 }
 
 #homepage-mid-line {
-  color:#b53a72;
+  font-family: "Phudu", sans-serif;
+  color:#ffa1b0ff;
   font-size: 6.2vw;
   font-weight: bold;
+  animation: titleFloat 1s infinite alternate ease-out;
+  /* animation: titleFloat 1s infinite alternate ease-in; */
+  text-shadow: 0px 10px 0px #b53a72;
+}
+
+
+@keyframes titleFloat {
+  0% {
+    transform: translateY(-2px)
+  }
+
+  100% {
+    transform: translateY(-10px)
+  }
+}
+
+@keyframes cartoonFloat {
+  0% {
+    transform: translateY(5px)
+  }
+
+  100% {
+    transform: translateY(-5px)
+  }
+}
+
+#homepage-bottom-line {
+  line-height: 4.5vw;
 }
 
 #download-cv-btn {
@@ -155,7 +194,7 @@ nav {
 
 #download-cv-btn > button {
   color:#b53a72;
-  background-color: #ffa1b0ff;
+  background-color: #ffa1b0;
   font-family: 'Courier New', Courier, monospace;
   text-wrap: nowrap;
   font-size: 1.2vw;
@@ -164,6 +203,7 @@ nav {
   border: 4px solid #b53a72;
   border-radius: 0.8vw;
   box-shadow: 0px 7px 0px #b53a72;
+  margin: 0px 5px;
 
 
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
