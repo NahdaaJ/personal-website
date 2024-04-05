@@ -1,6 +1,10 @@
 const container = document.querySelector('.container');
 const navBar = document.querySelector('nav');
 
+function tempFunction() {
+  alert("You got pranked! (つ≧▽≦)つ")
+}
+
 container.addEventListener('wheel', (event) => {
   event.preventDefault();
 

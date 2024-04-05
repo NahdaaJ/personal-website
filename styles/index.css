@@ -198,6 +198,69 @@ section {
   transition: height 0.1s ease;
 }
 
+
+/* ***************** Stars ***************** */
+.hp-misc-icons{
+  position: absolute;
+  z-index: 1;
+  animation: iconFloat 4s infinite alternate ease-in-out;
+}
+
+.hp-icon-set-1 {
+  height: 2vw;
+}
+.hp-icon-set-2 {
+  height: 1vw;
+}
+
+#star1{
+  top:8vw;
+  left:0vw;
+  animation-duration: 3s;
+}
+
+#star2{
+  bottom:8vw;
+  left:1vw;
+  animation-duration: 4s;
+}
+
+#star3{
+  top:3vw;
+  right:2vw;
+  animation-duration: 5s;
+}
+
+#star4{
+  top:0vw;
+  right:10vw;
+  animation-duration: 3s;
+}
+
+#star5{
+  bottom:6vw;
+  right:0vw;
+  animation-duration: 4s;
+}
+
+#star6{
+  top:10vw;
+  right:4vw;
+  animation-duration: 5s;
+}
+
+
+@keyframes iconFloat {
+  0% {
+    transform: translateY(0px)
+  }
+
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+/* Contact Icons +++++++++++++++++++++++++++++ */
 .click-icons:hover {
   height:4.2vw;
 }
@@ -233,15 +296,6 @@ section {
   }
 }
 
-@keyframes iconFloat {
-  0% {
-    transform: translateY(0px)
-  }
-
-  100% {
-    transform: translateY(15px);
-  }
-}
 
 @keyframes linkedinFloat {
   0% {
