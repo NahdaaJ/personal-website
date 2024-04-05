@@ -141,7 +141,7 @@ nav {
 /*SECTION SET UP -----------------------------------------------------------------------------------------*/
 
 section {
-  height: 100vh;
+  height: 100svh;
   scroll-snap-align: start;
 }
 
