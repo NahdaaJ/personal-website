@@ -1,13 +1,13 @@
 const container = document.querySelector('.container');
 const navBar = document.querySelector('nav');
 
-let startY; // Variable to store initial touch position
+// let startY; // Variable to store initial touch position
 
-container.addEventListener('touchstart', (event) => {
-  // Store the initial Y position of the touch
-  startY = event.touches[0].clientY;
-  // container.style.scrollSnapType = "none";
-});
+// container.addEventListener('touchstart', (event) => {
+//   Store the initial Y position of the touch
+//   startY = event.touches[0].clientY;
+//   container.style.scrollSnapType = "none";
+// });
 
 // container.addEventListener('touchmove', (event) => {
 //     const delta = Math.sign(event.touches[0].clientY - startY);
@@ -21,18 +21,18 @@ container.addEventListener('touchstart', (event) => {
 //     container.style.scrollSnapType = "y mandatory";
 // } );
 
-container.addEventListener('touchmove', (event) => {
-  const delta = event.touches[0].clientY - startY;
+// container.addEventListener('touchmove', (event) => {
+//   const delta = event.touches[0].clientY - startY;
 
-  // Scroll the content by the calculated amount
-  container.scrollBy({
-    top: -delta,
-    behavior: "smooth"
-  });
+//   Scroll the content by the calculated amount
+//   container.scrollBy({
+//     top: -delta,
+//     behavior: "smooth"
+//   });
 
-  // Prevent default touch behavior (e.g., scrolling the entire page)
-  e.preventDefault();
-});
+//   Prevent default touch behavior (e.g., scrolling the entire page)
+//   e.preventDefault();
+// });
 
 function tempFunction() {
   alert("You got pranked! (つ≧▽≦)つ")
