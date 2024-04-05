@@ -4,6 +4,31 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
+.temp-links{
+  margin:10px 10px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #b53a72;
+  padding:10px;
+  border: 5px solid #b53a72;
+  border-radius: 20px;
+  display:inline-block;
+  background-color: #ffb0c0;
+  box-shadow: 5px 10px 0px 0px #b53a72;
+
+  transition: all 0.2s ease;
+}
+
+.temp-links:hover{
+  background-color: #ef778f;
+}
+
+.temp-links:active{
+  transform: translateY(11px) translateX(6px);
+  box-shadow: 0px 0px 0px 0px #b53a72;
+}
+
 /* ACCESSABILITY ------------------------------------------------------------------------------------------*/
 .sr-visible {
   position: absolute;
