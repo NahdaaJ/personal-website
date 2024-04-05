@@ -6,20 +6,33 @@ let startY; // Variable to store initial touch position
 container.addEventListener('touchstart', (event) => {
   // Store the initial Y position of the touch
   startY = event.touches[0].clientY;
-  container.style.scrollSnapType = "none";
+  // container.style.scrollSnapType = "none";
 });
 
+// container.addEventListener('touchmove', (event) => {
+//     const delta = Math.sign(event.touches[0].clientY - startY);
+
+//     container.scrollBy({
+//       top: -delta * 1000,
+//       behavior: "smooth"
+//     });
+
+//     event.preventDefault();
+//     container.style.scrollSnapType = "y mandatory";
+// } );
+
 container.addEventListener('touchmove', (event) => {
-    const delta = Math.sign(event.touches[0].clientY - startY);
+  const delta = event.touches[0].clientY - startY;
 
-    container.scrollBy({
-      top: delta * 1000,
-      behavior: "smooth"
-    });
+  // Scroll the content by the calculated amount
+  container.scrollBy({
+    top: -delta,
+    behavior: "smooth"
+  });
 
-    event.preventDefault();
-    container.style.scrollSnapType = "y mandatory";
-} );
+  // Prevent default touch behavior (e.g., scrolling the entire page)
+  e.preventDefault();
+});
 
 function tempFunction() {
   alert("You got pranked! (つ≧▽≦)つ")
