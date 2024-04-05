@@ -15,6 +15,8 @@ container.addEventListener('touchmove', (event) => {
       top: delta * 1000,
       behavior: "smooth"
     });
+
+    event.preventDefault();
 } );
 
 function tempFunction() {
