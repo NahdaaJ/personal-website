@@ -44,7 +44,7 @@
 
 /* WEBSITE CONTAINER -------------------------------------------------------------------------------------*/
 .container {
-  height: 100vh;
+  height: 100dvh;
   overflow-y: hidden;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;

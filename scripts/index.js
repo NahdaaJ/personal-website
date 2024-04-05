@@ -1,6 +1,22 @@
 const container = document.querySelector('.container');
 const navBar = document.querySelector('nav');
 
+let startY; // Variable to store initial touch position
+
+container.addEventListener('touchstart', (event) => {
+  // Store the initial Y position of the touch
+  startY = event.touches[0].clientY;
+});
+
+container.addEventListener('touchmove', (event) => {
+    const delta = Math.sign(event.touches[0].clientY - startY);
+
+    container.scrollBy({
+      top: delta * 1000,
+      behavior: "smooth"
+    });
+} );
+
 function tempFunction() {
   alert("You got pranked! (つ≧▽≦)つ")
 }
@@ -9,7 +25,7 @@ container.addEventListener('wheel', (event) => {
   event.preventDefault();
 
   const delta = Math.sign(event.deltaY);
-  const scrollAmount = 500;
+  const scrollAmount = 1000;
 
   container.scrollBy({
     top: delta * scrollAmount,
