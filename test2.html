@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+
+    #container {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      height: 200px;
+      width: 300px;
+      background-color: aquamarine;
+    }
+
+    #moon {
+      height: 80px;
+      position: absolute;
+      top: 40px;
+      left: 40px;
+    }
+
+    #sun {
+      height: 120px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    #moon[active="true"] {
+      animation: nightmodeMoon 1s ease-in;
+    }
+
+    #moon[active="false"] {
+      animation: nightmodeMoon 1s ease-in reverse;
+    }
+
+    #sun[active="true"]{
+      animation: nightmodeSun 1s ease-in;
+    }
+
+    #sun[active="false"]{
+      animation: nightmodeSun 1s ease-in reverse;
+    }
+
+    @keyframes nightmodeMoon {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes nightmodeSun {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+  <button id="container">
+    <img active="true" src="images/moon.png" id="moon"></img>
+    <img active="false" src=images/sun.png id="sun"></img>
+  </button>
+  <script>
+
+  </script>
+</body>
+</html>

@@ -1,8 +1,9 @@
-body {
+@media (min-width: 601px) and (max-width: 800px) {
+  body {
   margin: 0;
   padding: 0;
   font-family: 'Courier New', Courier, monospace;
-}
+} 
 
 .temp-links{
   margin:10px 10px;
@@ -49,7 +50,6 @@ body {
   scroll-behavior: smooth;
 }
 
-
 /* NAVIGATION BAR ----------------------------------------------------------------------------------------*/
 nav {
   position: fixed;
@@ -70,12 +70,12 @@ nav {
 
 #nav-links {
   display: flex;
-  gap:50px;
+  gap:3vw;
 }
 
 .nav-button {
   text-decoration: none;
-  font-size: 120%;
+  font-size: 2vw;
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
   background-color: transparent;
@@ -94,10 +94,11 @@ nav {
   display: flex;
   background-color: transparent;
   border: none;
+  width:auto;
 }
 
 #logo > img {
-  height: 80px;
+  height: 60px;
   align-items: center;
 }
 
@@ -107,17 +108,17 @@ nav {
     opacity: 0;
   }
   100% {
-    height: 80px;
-    margin-left: 40vw;
+    height: 60px;
+    margin-left: 26vw;
     opacity: 1;
   }
 }
 
 @keyframes reverseNav {
   0% {
-    margin-left: 40vw;
+    margin-left: 26vw;
     opacity: 1;
-    height: 80px;
+    height: 60px;
   }
 
   100% {
@@ -133,7 +134,7 @@ nav {
 }
 
 [homepage-nav="false"] img {
-  margin-left:40vw;
+  margin-left:26vw;
   animation: bigNav 1s ease;
 }
 
@@ -150,8 +151,8 @@ section {
 
 /*HOMEPAGE -----------------------------------------------------------------------------------------------*/
 #section-homepage{
-  background-color: #ffe4e4ff;
-  height: 100vh;
+  /* background-color: #ffe4e4ff; */
+  background-color: rgb(123, 255, 196);
 
   background-image:
         linear-gradient(90deg, #fff2f2 1px, transparent 1px), /* Vertical lines */
@@ -163,14 +164,14 @@ section {
   display: grid;
   /* height: 100dvh; */
   /* width: 100vw; */
-  grid-template-columns: repeat(11, minmax(100px, 300px));
+  grid-template-columns: repeat(7, minmax(100px, 300px));
   grid-template-rows: repeat(15, 6vh);
 }
 
 /* Homepage Image ++++++++++++++++++++++++++++++++*/
 #homepage-cartoon {
   grid-row: 4 /11;
-  grid-column: 2/ 6;
+  grid-column: 2/ 4;
   align-self: center;
   justify-self: center;
   position: relative;
@@ -330,8 +331,8 @@ section {
 
 /* Homepage Text ++++++++++++++++++++++++++++++++*/
 #homepage-intro-text {
-  grid-row: 5 / 9 ;
-  grid-column: 6 / 11;
+  grid-row: 6 / 9 ;
+  grid-column: 4 / 7;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -408,20 +409,24 @@ section {
 
 /*ABOUT ME -----------------------------------------------------------------------------------------------*/
 #section-about-me {
-  background: rgb(255, 149, 149);
+  /* background: rgb(255, 149, 149); */
+  background: rgb(123, 255, 196);
 }
 
 /*EXPERIENCE ---------------------------------------------------------------------------------------------*/
 #section-experience{
-  background: rgb(255, 237, 237);
+  /* background: rgb(255, 237, 237); */
+  background-color: rgb(123, 255, 196);
 }
 
 /*PROJECTS -----------------------------------------------------------------------------------------------*/
 #section-projects {
-  background: rgb(255, 149, 149);
+  /* background: rgb(255, 149, 149); */
+  background-color: rgb(123, 255, 196);
 }
 
 /*CONTACT -----------------------------------------------------------------------------------------------*/
 #section-contact {
-  background: rgb(255, 255, 255);
-}
+  /* background: rgb(255, 255, 255); */
+  background-color: rgb(123, 255, 196);
+}}
