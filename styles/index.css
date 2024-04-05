@@ -170,21 +170,21 @@ section {
 #hp-linkedin {
   top:1vh;
   left:2vw;
-  border-radius: 10px;
+  border-radius: 0.6vw;
   animation: linkedinFloat 4s infinite alternate ease-in-out;
 }
 
 #hp-github {
   top: 12vw;
   right:1vw;
-  border-radius: 40px;
+  border-radius: 3vw;
   animation: githubFloat 2s infinite alternate ease-in-out;
 }
 
 #hp-email {
   bottom: 30px;
   left:0px;
-  border-radius: 10px;
+  border-radius: 0.6vw;
   animation: emailFloat 6s infinite alternate ease-in-out;
 }
 
