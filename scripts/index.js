@@ -6,6 +6,7 @@ let startY; // Variable to store initial touch position
 container.addEventListener('touchstart', (event) => {
   // Store the initial Y position of the touch
   startY = event.touches[0].clientY;
+  container.style.scrollSnapType = "none";
 });
 
 container.addEventListener('touchmove', (event) => {
@@ -17,6 +18,7 @@ container.addEventListener('touchmove', (event) => {
     });
 
     event.preventDefault();
+    container.style.scrollSnapType = "y mandatory";
 } );
 
 function tempFunction() {
