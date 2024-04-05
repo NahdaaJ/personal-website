@@ -29,9 +29,17 @@ container.addEventListener('keydown', (event) => {
   });
 });
 
-function letsGoBtnClick() {
+function scrollToSection(sectionAmount){
+  const currentPosition = container.scrollTop;
   container.scrollBy({
-    top: 500,
+    top: sectionAmount-currentPosition,
+    behavior: "smooth"
+  });
+}
+
+function scrollToTop(){
+  container.scrollTo({
+    top: 0,
     behavior: "smooth"
   });
 }

@@ -48,23 +48,27 @@ nav {
   gap:50px;
 }
 
-.nav-link {
+.nav-button {
   text-decoration: none;
-  font-size: 25px;
   font-size: 120%;
   font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: transparent;
+  border: none;
   color: #b53a72;
   min-width: fit-content;
   transition: color 0.5s ease;
 }
 
-.nav-link:hover, #logo:hover {
+.nav-button:hover, #logo:hover {
   color: #ffa1b0;
 }
 
 #logo {
   transition: color 0.5s ease;
   display: flex;
+  background-color: transparent;
+  border: none;
 }
 
 #logo > img {
@@ -165,6 +169,12 @@ section {
   z-index: 2;
   height:4vw;
   box-shadow: 0px 0px 10px 1px #b53a72;
+
+  transition: height 0.1s ease;
+}
+
+.click-icons:hover {
+  height:4.2vw;
 }
 
 #hp-linkedin {
@@ -276,24 +286,22 @@ section {
   0% {
     transform: translateY(0px)
   }
-
   100% {
     transform: translateY(-8px)
   }
 }
 
-
-
 #homepage-bottom-line {
   line-height: 3vw;
 }
 
-#download-cv-btn {
+#homepage-btns {
   grid-row: 9 / 10;
   grid-column: 6 / 8;
+  display: inline;
 }
 
-#download-cv-btn > button {
+#homepage-btns > button {
   color:#b53a72;
   background-color: #ffa1b0;
   padding: 0.5vw 3vw;
@@ -310,12 +318,11 @@ section {
   transition: all 0.2s ease;
 }
 
-#download-cv-btn > button:hover {
+#homepage-btns > button:hover {
   background-color:#ef778f;
 }
 
-
-#download-cv-btn > button:active {
+#homepage-btns > button:active {
   transform: translateY(8px);
   box-shadow: 0px 0px 0px #b53a72;
 }

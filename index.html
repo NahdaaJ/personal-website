@@ -14,27 +14,28 @@
   <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
   <link rel="manifest" href="icons/site.webmanifest">
 
-
   <title>Home</title>
 </head>
+
 <body>
   <div class="container">
     <nav initial-load="true" role="navigation">
       <div id="nav-links">
-        <h1 class="sr-visible">Hello. I'm Nahdaa Jawed, and I'm a software engineer.
+        <!-- <h1 class="sr-visible">Hello. I'm Nahdaa Jawed, and I'm a software engineer.
           Accessibility is important to me, so if you would like to toggle the accessible version of the webpage 
           please press 'a'.
-        </h1>
-        <a role="link" class="nav-link" href="#section-about-me">About Me</a>
-        <a role="link" class="nav-link" href="#section-experience">Experience</a>
-        <a role="link" class="nav-link" href="#section-projects">Projects</a>
-        <a role="link" class="nav-link" href="#section-contact">Contact</a>
+        </h1> -->
+        <button onclick="scrollToSection(1000)" role="link" class="nav-button">About Me</button>
+        <button onclick="scrollToSection(2000)" role="link" class="nav-button">Experience</button>
+        <button onclick="scrollToSection(3000)" role="link" class="nav-button">Projects</button>
+        <button onclick="scrollToSection(4000)" role="link" class="nav-button">Contact</button>
       </div>
-      <a role="link" id="logo" href="#section-homepage"><img src="images/page-logo.png"></a>
-      <!-- <a role="link" id="logo" href="#section-homepage">NJ</a> -->
+
+      <button onclick="scrollToTop()" role="link" id="logo"><img src="images/page-logo.png"></button>
     </nav>
 
     <main role="main">
+      <!-- ----------------------------------------- HOMEPAGE ----------------------------------------- -->
       <section id="section-homepage" is-homepage="true">
         <div id="homepage-content" class="section-content">
 
@@ -49,45 +50,50 @@
 
           <div id="homepage-intro-text" aria-hidden="true">
             <div id="homepage-top-line">Hello! I'm</div>
-            <!-- <div id="homepage-mid-line">Nahdaa Jawed</div> -->
             <div id="homepage-mid-line"><img src="images/title.png"/></div>
             <div id="homepage-bottom-line">and I'm a software engineer! (✿＾▽＾)
           </div>
-          <div id="download-cv-btn">
+
+          <div id="homepage-btns">
             <button>Download CV</button>
-            <button onclick="letsGoBtnClick()">Start</button>
-          </div>  
-        </div>
+            <button onclick="scrollToSection(1000)">Start</button>
+          </div>
 
         </div>
       </section>
 
+      <!-- ----------------------------------------- ABOUT ME ----------------------------------------- -->
       <section id="section-about-me" is-homepage="false">
         <div id="about-me-content" class="section-content">
           <h1>This is the "About Me" Section</h1>
         </div>
       </section>
 
+      <!-- ----------------------------------------- EXPERIENCE ----------------------------------------- -->
       <section id="section-experience" is-homepage="false">
         <div id="experience-content" class="section-content">
           <h1>This is the "Experience" Section</h1>
         </div>
       </section>
 
+      <!-- ----------------------------------------- PROJECTS ----------------------------------------- -->
       <section id="section-projects" is-homepage="false">
         <div id="projects-content" class="section-content">
           <h1>This is the "Projects" Section</h1>
         </div>
       </section>
 
+      <!-- ----------------------------------------- CONTACT ----------------------------------------- -->
       <section class="section-contact" id="section-contact" is-homepage="false">
         <div id="contact-content" class="section-content">
           <h1>This is the "Contact" Section</h1>
         </div>
       </section>
-    </main>
 
+    </main>
   </div>
+
   <script src="scripts/index.js"></script>
+  
 </body>
 </html>
