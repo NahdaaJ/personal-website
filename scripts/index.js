@@ -29,12 +29,12 @@ container.addEventListener('keydown', (event) => {
   });
 });
 
-function scrollToSection(sectionAmount){
-  const currentPosition = container.scrollTop;
-  container.scrollBy({
-    top: sectionAmount-currentPosition,
-    behavior: "smooth"
-  });
+function scrollToSection(sectionName){
+  const section = document.getElementById(sectionName);
+
+  if(section) {
+    section.scrollIntoView({behavior: "smooth"})
+  }
 }
 
 function scrollToTop(){
@@ -48,6 +48,7 @@ function scrollToTop(){
 container.addEventListener('scroll', function(){
   const homepageSection = document.querySelector('[is-homepage="true"]');
   const isHomepage = homepageSection.getBoundingClientRect().top === 0;
+
 
   if (isHomepage) {
     navBar.setAttribute("homepage-nav", "true");
