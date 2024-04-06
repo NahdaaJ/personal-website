@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="styles/index-small.css" media="(max-width: 600px)">
-  <link rel="stylesheet" href="styles/index-medium-small.css" media="(min-width: 601px) and (max-width: 800px)">
+  <link rel="stylesheet" href="styles/index-medium-small-portrait.css" media="(min-width: 601px) and (max-width: 800px) and (min-height: 945px)">
+  <link rel="stylesheet" href="styles/index-medium-small-landscape.css" media="(min-width: 601px) and (max-width: 800px) and (max-height: 945px)">
   <link rel="stylesheet" href="styles/index-medium.css" media="(min-width: 800px) and (max-width: 1024px)">
   <link rel="stylesheet" href="styles/index-large.css" media="(min-width: 1025px)">
 
@@ -23,7 +24,11 @@
 
 <body>
   <div class="container">
-    <nav initial-load="true" role="navigation">
+    <div role="navigation" id="phone-nav" expanded="false">
+      <button id="menu-open" onclick="expandPhoneMenu()"><img src="images/flower.png"></button>
+      <button id="menu-close" onclick="expandPhoneMenu()"><img src="images/close.png"></button>
+    </div>
+    <nav initial-load="true" role="navigation" id="desktop-nav">
       <div id="nav-links">
         <!-- <h1 class="sr-visible">Hello. I'm Nahdaa Jawed, and I'm a software engineer.
           Accessibility is important to me, so if you would like to toggle the accessible version of the webpage 

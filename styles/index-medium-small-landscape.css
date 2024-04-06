@@ -1,9 +1,9 @@
-@media (max-width: 600px){
+@media (min-width: 601px) and (max-width: 800px) and (max-height: 945px){
   body {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
-  }
+  } 
   
   .temp-links{
     margin:10px 10px;
@@ -50,96 +50,65 @@
     scroll-behavior: smooth;
   }
   
-  
   /* NAVIGATION BAR ----------------------------------------------------------------------------------------*/
-  #desktop-nav {
+  #phone-nav[expanded="false"] {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #phone-nav[expanded="true"] {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffb0c0;
+    z-index: 3;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+
+  #phone-nav > button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+  }
+
+  #menu-open, #menu-close {
+    display: block;
+    margin: auto;
+  }
+
+  #menu-close{
+    position: absolute;
+    top:44px;
+    right: 38px;
+  }
+
+  #menu-open>img {
+    height: 60px;
+  }
+
+  #menu-close>img {
+    height: 30px;
+  }
+
+  [expanded="false"] #menu-close>img,
+  [expanded="false"] .phone-nav-button,
+  [expanded="true"]  #menu-open>img
+  {
     display: none;
   }
   
   nav {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0px;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    padding-top:20px;
-  }
-  
-  [initial-load="true"] #logo {
     display: none;
-  }
-  
-  #nav-links {
-    display: flex;
-    gap:50px;
-  }
-  
-  .nav-button {
-    text-decoration: none;
-    font-size: 120%;
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: transparent;
-    border: none;
-    color: #b53a72;
-    min-width: fit-content;
-    transition: color 0.5s ease;
-  }
-  
-  .nav-button:hover, #logo:hover {
-    color: #ffa1b0;
-  }
-  
-  #logo {
-    transition: color 0.5s ease;
-    display: flex;
-    background-color: transparent;
-    border: none;
-  }
-  
-  #logo > img {
-    height: 80px;
-    align-items: center;
-  }
-  
-  @keyframes bigNav {
-    0% {
-      margin-left: 0px;
-      opacity: 0;
-    }
-    100% {
-      height: 80px;
-      margin-left: 40vw;
-      opacity: 1;
-    }
-  }
-  
-  @keyframes reverseNav {
-    0% {
-      margin-left: 40vw;
-      opacity: 1;
-      height: 80px;
-    }
-  
-    100% {
-      margin-left: 0px;
-      opacity: 0;
-      height: 0px;
-      display: none;
-    }
-  }
-  
-  [homepage-nav="true"] img {
-    animation: reverseNav 1s ease forwards;
-  }
-  
-  [homepage-nav="false"] img {
-    margin-left:40vw;
-    animation: bigNav 1s ease;
   }
   
   /*SECTION SET UP -----------------------------------------------------------------------------------------*/
@@ -149,14 +118,14 @@
     scroll-snap-align: start;
   }
   
-  .section-content {
+  /* .section-content {
     padding-top: 100px;
-  }
+  } */
   
   /*HOMEPAGE -----------------------------------------------------------------------------------------------*/
   #section-homepage{
-    background-color: #ffe4e4ff;
-    height: 100vh;
+    /* background-color: #ffe4e4ff; */
+    background-color: rgb(255, 209, 123);
   
     background-image:
           linear-gradient(90deg, #fff2f2 1px, transparent 1px), /* Vertical lines */
@@ -168,14 +137,14 @@
     display: grid;
     /* height: 100dvh; */
     /* width: 100vw; */
-    grid-template-columns: repeat(11, minmax(100px, 300px));
-    grid-template-rows: repeat(15, 6vh);
+    grid-template-columns: repeat(7, minmax(100px, 300px));
+    grid-template-rows: repeat(4, 25vh);
   }
   
   /* Homepage Image ++++++++++++++++++++++++++++++++*/
   #homepage-cartoon {
-    grid-row: 4 /11;
-    grid-column: 2/ 6;
+    grid-row: 2 /4;
+    grid-column: 2/ 4;
     align-self: center;
     justify-self: center;
     position: relative;
@@ -335,8 +304,8 @@
   
   /* Homepage Text ++++++++++++++++++++++++++++++++*/
   #homepage-intro-text {
-    grid-row: 5 / 9 ;
-    grid-column: 6 / 11;
+    grid-row: 2 / 4 ;
+    grid-column: 4 / 7;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -413,21 +382,25 @@
   
   /*ABOUT ME -----------------------------------------------------------------------------------------------*/
   #section-about-me {
-    background: rgb(255, 149, 149);
+    /* background: rgb(255, 149, 149); */
+    background: rgb(255, 209, 123);
   }
   
   /*EXPERIENCE ---------------------------------------------------------------------------------------------*/
   #section-experience{
-    background: rgb(255, 237, 237);
+    /* background: rgb(255, 237, 237); */
+    background-color: rgb(255, 209, 123);
   }
   
   /*PROJECTS -----------------------------------------------------------------------------------------------*/
   #section-projects {
-    background: rgb(255, 149, 149);
+    /* background: rgb(255, 149, 149); */
+    background-color: rgb(255, 209, 123);
   }
   
   /*CONTACT -----------------------------------------------------------------------------------------------*/
   #section-contact {
-    background: rgb(255, 255, 255);
+    /* background: rgb(255, 255, 255); */
+    background-color: rgb(255, 209, 123);
   }
 }

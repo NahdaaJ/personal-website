@@ -1,53 +1,42 @@
+alert("Progress Report: \n I'm currently working on responsiveness! (^▽^)/ ")
+
 const container = document.querySelector('.container');
 const navBar = document.querySelector('nav');
-
-// let startY; // Variable to store initial touch position
-
-// container.addEventListener('touchstart', (event) => {
-//   Store the initial Y position of the touch
-//   startY = event.touches[0].clientY;
-//   container.style.scrollSnapType = "none";
-// });
-
-// container.addEventListener('touchmove', (event) => {
-//     const delta = Math.sign(event.touches[0].clientY - startY);
-
-//     container.scrollBy({
-//       top: -delta * 1000,
-//       behavior: "smooth"
-//     });
-
-//     event.preventDefault();
-//     container.style.scrollSnapType = "y mandatory";
-// } );
-
-// container.addEventListener('touchmove', (event) => {
-//   const delta = event.touches[0].clientY - startY;
-
-//   Scroll the content by the calculated amount
-//   container.scrollBy({
-//     top: -delta,
-//     behavior: "smooth"
-//   });
-
-//   Prevent default touch behavior (e.g., scrolling the entire page)
-//   e.preventDefault();
-// });
+const phoneNav = document.querySelector('#phone-nav')
 
 function tempFunction() {
   alert("You got pranked! (つ≧▽≦)つ")
 }
 
+
+function expandPhoneMenu() {
+  const currentPhoneNavState = phoneNav.getAttribute("expanded");
+
+  if (currentPhoneNavState === "true") {
+    phoneNav.setAttribute("expanded", "false");
+  }
+  else if (currentPhoneNavState === "false") {
+    phoneNav.setAttribute("expanded", "true");
+  }
+}
+
 container.addEventListener('wheel', (event) => {
-  event.preventDefault();
 
-  const delta = Math.sign(event.deltaY);
-  const scrollAmount = 1000;
+  if(currentState === "false") {
+    event.preventDefault();
 
-  container.scrollBy({
-    top: delta * scrollAmount,
-    behavior: "smooth"
-  });
+    const delta = Math.sign(event.deltaY);
+    const scrollAmount = 500;
+
+    container.scrollBy({
+      top: delta * scrollAmount,
+      behavior: "smooth"
+    });
+  }
+  else if (currentState === "true") {
+
+  }
+
 });
 
 container.addEventListener('keydown', (event) => {
