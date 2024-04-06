@@ -20,23 +20,41 @@ function expandPhoneMenu() {
   }
 }
 
+// container.addEventListener('wheel', (event) => {
+
+//   if (phoneNav.style.display !== "none"){
+//     if(currentState === "false") {
+      
+//     }
+//     else if (currentState === "true") {
+//       event.preventDefault();
+//     }
+//   }
+
+//   else {
+//     event.preventDefault();
+
+//       const delta = Math.sign(event.deltaY);
+//       const scrollAmount = 500;
+
+//       container.scrollBy({
+//         top: delta * scrollAmount,
+//         behavior: "smooth"
+//       });
+//     }
+// });
+
 container.addEventListener('wheel', (event) => {
 
-  if(currentState === "false") {
     event.preventDefault();
 
-    const delta = Math.sign(event.deltaY);
-    const scrollAmount = 500;
+      const delta = Math.sign(event.deltaY);
+      const scrollAmount = 500;
 
-    container.scrollBy({
-      top: delta * scrollAmount,
-      behavior: "smooth"
-    });
-  }
-  else if (currentState === "true") {
-
-  }
-
+      container.scrollBy({
+        top: delta * scrollAmount,
+        behavior: "smooth"
+      });
 });
 
 container.addEventListener('keydown', (event) => {
