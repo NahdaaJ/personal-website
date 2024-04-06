@@ -20,41 +20,19 @@ function expandPhoneMenu() {
   }
 }
 
-// container.addEventListener('wheel', (event) => {
-
-//   if (phoneNav.style.display !== "none"){
-//     if(currentState === "false") {
-      
-//     }
-//     else if (currentState === "true") {
-//       event.preventDefault();
-//     }
-//   }
-
-//   else {
-//     event.preventDefault();
-
-//       const delta = Math.sign(event.deltaY);
-//       const scrollAmount = 500;
-
-//       container.scrollBy({
-//         top: delta * scrollAmount,
-//         behavior: "smooth"
-//       });
-//     }
-// });
-
 container.addEventListener('wheel', (event) => {
+  const currentPhoneNavState = phoneNav.getAttribute("expanded");
+  event.preventDefault();
 
-    event.preventDefault();
+  if (currentPhoneNavState !== "true") {
+        const delta = Math.sign(event.deltaY);
+    const scrollAmount = 500;
 
-      const delta = Math.sign(event.deltaY);
-      const scrollAmount = 500;
-
-      container.scrollBy({
-        top: delta * scrollAmount,
-        behavior: "smooth"
-      });
+    container.scrollBy({
+      top: delta * scrollAmount,
+      behavior: "smooth"
+    });
+  }
 });
 
 container.addEventListener('keydown', (event) => {
@@ -75,6 +53,11 @@ container.addEventListener('keydown', (event) => {
 
 function scrollToSection(sectionName){
   const section = document.getElementById(sectionName);
+  const currentPhoneNavState = phoneNav.getAttribute("expanded");
+  
+  if (currentPhoneNavState === "true"){
+    phoneNav.setAttribute("expanded", "false");
+  }
 
   if(section) {
     section.scrollIntoView({behavior: "smooth"})
@@ -82,6 +65,12 @@ function scrollToSection(sectionName){
 }
 
 function scrollToTop(){
+  const currentPhoneNavState = phoneNav.getAttribute("expanded");
+
+  if (currentPhoneNavState === "true"){
+    phoneNav.setAttribute("expanded", "false");
+  }
+
   container.scrollTo({
     top: 0,
     behavior: "smooth"

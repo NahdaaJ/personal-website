@@ -3,8 +3,8 @@
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
-  } 
-  
+  }
+
   .temp-links{
     margin:10px 10px;
     text-decoration: none;
@@ -17,19 +17,19 @@
     display:inline-block;
     background-color: #ffb0c0;
     box-shadow: 5px 10px 0px 0px #b53a72;
-  
+
     transition: all 0.2s ease;
   }
-  
+
   .temp-links:hover{
     background-color: #ef778f;
   }
-  
+
   .temp-links:active{
     transform: translateY(11px) translateX(6px);
     box-shadow: 0px 0px 0px 0px #b53a72;
   }
-  
+
   /* ACCESSABILITY ------------------------------------------------------------------------------------------*/
   .sr-visible {
     position: absolute;
@@ -41,7 +41,7 @@
     clip: rect(0, 0, 0, 0);
     border: 0;
   }
-  
+
   /* WEBSITE CONTAINER -------------------------------------------------------------------------------------*/
   .container {
     height: 100vh;
@@ -49,17 +49,18 @@
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
   }
-  
+
   /* NAVIGATION BAR ----------------------------------------------------------------------------------------*/
+
+  #phone-nav {
+    transition: all 0.2s ease;
+  }
   #phone-nav[expanded="false"] {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 0px;
+    right: 0px;
     height: 100px;
     width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   #phone-nav[expanded="true"] {
@@ -84,12 +85,14 @@
   #menu-open, #menu-close {
     display: block;
     margin: auto;
+    position: absolute;
+    top:40px;
+    right: 40px;
   }
 
   #menu-close{
-    position: absolute;
-    top:44px;
-    right: 38px;
+    top: 58px;
+    right: 54px;
   }
 
   #menu-open>img {
@@ -100,39 +103,68 @@
     height: 30px;
   }
 
+  #phone-nav-links {
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap:30px;
+  }
+
+  .phone-nav-button {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #b53a72;
+    width: 35vw;
+    text-align: start;
+    text-wrap: nowrap;
+
+    background: none;
+    border: none;
+
+    transition: all 0.3s ease;
+  }
+  .phone-nav-button:hover {
+    color:#fff2f2;
+  }
+
   [expanded="false"] #menu-close>img,
   [expanded="false"] .phone-nav-button,
   [expanded="true"]  #menu-open>img
   {
     display: none;
   }
-  
+
   nav {
     display: none;
   }
-  
+
   /*SECTION SET UP -----------------------------------------------------------------------------------------*/
-  
+
   section {
     height: 100dvh;
     scroll-snap-align: start;
   }
-  
+
   /* .section-content {
     padding-top: 100px;
   } */
-  
+
   /*HOMEPAGE -----------------------------------------------------------------------------------------------*/
   #section-homepage{
     /* background-color: #ffe4e4ff; */
     background-color: rgb(255, 209, 123);
-  
+
     background-image:
           linear-gradient(90deg, #fff2f2 1px, transparent 1px), /* Vertical lines */
           linear-gradient(0deg, #fff2f2 1px, transparent 1px); /* Horizontal lines */
       background-size: 50px 50px; /* Size of the grid cells */
   }
-  
+
   #homepage-content {
     display: grid;
     /* height: 100dvh; */
@@ -140,7 +172,7 @@
     grid-template-columns: repeat(7, minmax(100px, 300px));
     grid-template-rows: repeat(4, 25vh);
   }
-  
+
   /* Homepage Image ++++++++++++++++++++++++++++++++*/
   #homepage-cartoon {
     grid-row: 2 /4;
@@ -149,7 +181,7 @@
     justify-self: center;
     position: relative;
   }
-  
+
   #cartoon-me {
     position: absolute;
     left:1vw;
@@ -157,151 +189,151 @@
     animation: cartoonFloat 5s infinite alternate ease-in-out;
     z-index: 1;
   }
-  
+
   #blob {
     z-index: -1;
     height:25vw;
   }
-  
+
   .click-icons {
     position: absolute;
     z-index: 2;
     height:4vw;
     box-shadow: 0px 0px 10px 1px #b53a72;
-  
+
     transition: height 0.1s ease;
   }
-  
-  
+
+
   /* ***************** Stars ***************** */
   .hp-misc-icons{
     position: absolute;
     z-index: 1;
     animation: iconFloat 4s infinite alternate ease-in-out;
   }
-  
+
   .hp-icon-set-1 {
     height: 2vw;
   }
   .hp-icon-set-2 {
     height: 1vw;
   }
-  
+
   #star1{
     top:8vw;
     left:0vw;
     animation-duration: 3s;
   }
-  
+
   #star2{
     bottom:8vw;
     left:1vw;
     animation-duration: 4s;
   }
-  
+
   #star3{
     top:3vw;
     right:2vw;
     animation-duration: 5s;
   }
-  
+
   #star4{
     top:0vw;
     right:10vw;
     animation-duration: 3s;
   }
-  
+
   #star5{
     bottom:6vw;
     right:0vw;
     animation-duration: 4s;
   }
-  
+
   #star6{
     top:10vw;
     right:4vw;
     animation-duration: 5s;
   }
-  
-  
+
+
   @keyframes iconFloat {
     0% {
       transform: translateY(0px)
     }
-  
+
     100% {
       transform: translateY(5px);
     }
   }
-  
+
   /* Contact Icons +++++++++++++++++++++++++++++ */
   .click-icons:hover {
     height:4.2vw;
   }
-  
+
   #hp-linkedin {
     top:1vh;
     left:2vw;
     border-radius: 0.6vw;
     animation: linkedinFloat 4s infinite alternate ease-in-out;
   }
-  
+
   #hp-github {
     top: 12vw;
     right:1vw;
     border-radius: 3vw;
     animation: githubFloat 2s infinite alternate ease-in-out;
   }
-  
+
   #hp-email {
     bottom: 30px;
     left:0px;
     border-radius: 0.6vw;
     animation: emailFloat 6s infinite alternate ease-in-out;
   }
-  
+
   @keyframes cartoonFloat {
     0% {
       transform: translateY(5px)
     }
-  
+
     100% {
       transform: translateY(-5px);
     }
   }
-  
-  
+
+
   @keyframes linkedinFloat {
     0% {
       transform: translateY(0px) rotate(-20deg);
     }
-  
+
     100% {
       transform: translateY(15px) rotate(-20deg);
     }
   }
-  
+
   @keyframes githubFloat {
     0% {
       transform: translateY(0px) rotate(10deg);
     }
-  
+
     100% {
       transform: translateY(15px) rotate(10deg);
     }
   }
-  
+
   @keyframes emailFloat {
     0% {
       transform: translateY(0px) rotate(30deg);
     }
-  
+
     100% {
       transform: translateY(15px) rotate(30deg);
     }
   }
-  
-  
+
+
   /* Homepage Text ++++++++++++++++++++++++++++++++*/
   #homepage-intro-text {
     grid-row: 2 / 4 ;
@@ -312,13 +344,13 @@
     line-height: 3.5vw;
     /* text-wrap: nowrap; */
   }
-  
+
   #homepage-top-line, #homepage-bottom-line {
     font-size: 1.6vw;
     font-weight: bold;
     color:#b53a72;
   }
-  
+
   #homepage-mid-line {
     /* font-family: "Phudu", sans-serif;
     color:#ffa1b0ff; */
@@ -329,12 +361,12 @@
     /* animation: titleFloat 1s infinite alternate ease-in; */
     text-shadow: 0px 10px 0px #b53a72;
   }
-  
+
   #homepage-mid-line > img {
     height: 5vw;
   }
-  
-  
+
+
   @keyframes titleFloat {
     0% {
       transform: translateY(0px)
@@ -343,17 +375,17 @@
       transform: translateY(-8px)
     }
   }
-  
+
   #homepage-bottom-line {
     line-height: 3vw;
   }
-  
+
   #homepage-btns {
     grid-row: 9 / 10;
     grid-column: 6 / 8;
     display: inline;
   }
-  
+
   #homepage-btns > button {
     color:#b53a72;
     background-color: #ffa1b0;
@@ -362,42 +394,42 @@
     border-radius: 0.8vw;
     box-shadow: 0px 7px 0px #b53a72;
     margin: 0px 5px;
-  
+
     font-family: 'Courier New', Courier, monospace;
     text-wrap: nowrap;
     font-size: 1.2vw;
     font-weight: bold;
-  
+
     transition: all 0.2s ease;
   }
-  
+
   #homepage-btns > button:hover {
     background-color:#ef778f;
   }
-  
+
   #homepage-btns > button:active {
     transform: translateY(8px);
     box-shadow: 0px 0px 0px #b53a72;
   }
-  
+
   /*ABOUT ME -----------------------------------------------------------------------------------------------*/
   #section-about-me {
     /* background: rgb(255, 149, 149); */
     background: rgb(255, 209, 123);
   }
-  
+
   /*EXPERIENCE ---------------------------------------------------------------------------------------------*/
   #section-experience{
     /* background: rgb(255, 237, 237); */
     background-color: rgb(255, 209, 123);
   }
-  
+
   /*PROJECTS -----------------------------------------------------------------------------------------------*/
   #section-projects {
     /* background: rgb(255, 149, 149); */
     background-color: rgb(255, 209, 123);
   }
-  
+
   /*CONTACT -----------------------------------------------------------------------------------------------*/
   #section-contact {
     /* background: rgb(255, 255, 255); */

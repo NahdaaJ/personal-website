@@ -24,9 +24,17 @@
 
 <body>
   <div class="container">
-    <div role="navigation" id="phone-nav" expanded="false">
+    <div role="navigation" id="phone-nav" expanded="false"> 
       <button id="menu-open" onclick="expandPhoneMenu()"><img src="images/flower.png"></button>
       <button id="menu-close" onclick="expandPhoneMenu()"><img src="images/close.png"></button>
+
+      <div id="phone-nav-links">
+        <button onclick="scrollToTop()" role="link" class="phone-nav-button">Home</button>
+        <button onclick="scrollToSection('section-about-me')" role="link" class="phone-nav-button">About Me</button>
+        <button onclick="scrollToSection('section-experience')" role="link" class="phone-nav-button">Experience</button>
+        <button onclick="scrollToSection('section-projects')" role="link" class="phone-nav-button">Projects</button>
+        <button onclick="scrollToSection('section-contact')" role="link" class="phone-nav-button">Contact</button>
+      </div>
     </div>
     <nav initial-load="true" role="navigation" id="desktop-nav">
       <div id="nav-links">
