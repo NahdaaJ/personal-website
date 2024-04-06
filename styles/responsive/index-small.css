@@ -1,0 +1,164 @@
+@import "/styles/base/base-styling.css";
+
+@import "/styles/components/navigation.css";
+@import "/styles/components/homepage.css";
+@import "/styles/components/about-me.css";
+@import "/styles/components/experience.css";
+@import "/styles/components/projects.css";
+@import "/styles/components/contact.css";
+
+@media (max-width: 600px){  
+  /* NAVIGATION BAR ----------------------------------------------------------------------------------------*/
+  #desktop-nav {
+    display: none;
+  }
+
+  #menu-open{
+    top: 30px;
+    right: 30px;
+  }
+
+  #menu-close{
+    top: 41px;
+    right: 40px;
+  }
+
+  #menu-open>img {
+    height: 40px;
+  }
+  
+  #menu-close>img {
+    height: 20px;
+  }
+
+  .phone-nav-button {
+    font-size: 25px;
+  }
+
+  /*SECTION SET UP -----------------------------------------------------------------------------------------*/
+  .section-content {
+    padding-top: 1px;
+  }
+  
+  /*HOMEPAGE -----------------------------------------------------------------------------------------------*/
+  #section-homepage{
+    background-color: rgb(211, 255, 101);
+  }
+  
+  #homepage-content {
+    grid-template-columns: repeat(5, 20vw);
+    grid-template-rows: repeat(9, 11.1vh);
+  }
+  
+  /* Homepage Image ++++++++++++++++++++++++++++++++*/
+  #homepage-cartoon {
+    grid-row: 3 / 6;
+    grid-column: 2/ 5;
+  }
+  
+  #cartoon-me, #blob {
+    height:30vh;
+  }
+  
+  /* ***************** Stars ***************** */
+  .hp-misc-icons{
+    position: absolute;
+    z-index: 1;
+    animation: iconFloat 4s infinite alternate ease-in-out;
+  }
+  
+  .hp-icon-set-1 {
+    height: 3vh;
+  }
+  .hp-icon-set-2 {
+    height: 2vh;
+  }
+  
+  #star1{
+    top:8vh;
+    left:-1vh;
+  }
+  
+  #star2{
+    bottom:13vh;
+    left:1vh;
+  }
+  
+  #star3{
+    top:5vh;
+    right:3vh;
+  }
+  
+  #star4{
+    top:1vh;
+    right:10vh;
+  }
+  
+  #star5{
+    bottom:6vh;
+    right:0vh;
+  }
+  
+  #star6{
+    top:10vh;
+    right:5vh;
+  }
+
+  /* Contact Icons +++++++++++++++++++++++++++++ */
+  .click-icons {
+    height:6vh;
+  }
+  
+  .click-icons:hover {
+    height:7vw;
+  }
+  
+  #hp-linkedin {
+    left:1vh;
+    border-radius: 1vh;
+  }
+  
+  #hp-github {
+    top: 13vh;
+    border-radius: 7vw;
+  }
+  
+  #hp-email {
+    border-radius: 1vw;
+    height:5vh;
+  }
+
+  /* Homepage Text ++++++++++++++++++++++++++++++++*/
+  #homepage-intro-text {
+    grid-row: 6 / 9 ;
+    grid-column: 2 / 5;
+    align-items: center;
+    line-height: 6vh;
+  }
+  
+  #homepage-top-line{
+    font-size: 3vh;
+  }
+  
+  #homepage-mid-line, #homepage-mid-line > img{
+    height: 12vw;
+  }
+  
+  #homepage-bottom-line {
+    font-size: 3vh;
+    line-height: 4vh;
+    text-align: center;
+    width: 90vw;
+  }
+  
+  #homepage-btns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #homepage-btns > button {
+    margin: 10px 0px;
+    font-size: 2.2vh;
+    border-radius: 0.7vh;
+  }
+}

@@ -1,0 +1,17 @@
+@import "/styles/base/base-styling.css";
+
+@import "/styles/components/navigation.css";
+@import "/styles/components/homepage.css";
+@import "/styles/components/about-me.css";
+@import "/styles/components/experience.css";
+@import "/styles/components/projects.css";
+@import "/styles/components/contact.css";
+
+
+@media (min-width: 1025px) {
+
+  /* NAVIGATION BAR ----------------------------------------------------------------------------------------*/
+  #phone-nav {
+    display: none;
+  }
+}
