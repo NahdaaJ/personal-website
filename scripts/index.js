@@ -1,5 +1,3 @@
-alert("Progress Report: \n I'm currently working on responsiveness! (^▽^)/ ")
-
 const container = document.querySelector('.container');
 const navBar = document.querySelector('nav');
 const phoneNav = document.querySelector('#phone-nav')
