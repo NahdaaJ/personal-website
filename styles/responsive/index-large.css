@@ -1,9 +1,9 @@
-@import "/styles/components/navigation.css";
-@import "/styles/components/homepage.css";
-@import "/styles/components/about-me.css";
-@import "/styles/components/experience.css";
-@import "/styles/components/projects.css";
-@import "/styles/components/contact.css";
+@import "/components/navigation/navigation.css";
+@import "/components/homepage/homepage.css";
+@import "/components/about-me/about-me.css";
+@import "/components/experience/experience.css";
+@import "/components/projects/projects.css";
+@import "/components/contact/contact.css";
 
 
 @media (min-width: 1025px) {

@@ -80,7 +80,6 @@ container.addEventListener('scroll', function(){
   const homepageSection = document.querySelector('[is-homepage="true"]');
   const isHomepage = homepageSection.getBoundingClientRect().top === 0;
 
-
   if (isHomepage) {
     navBar.setAttribute("homepage-nav", "true");
   } else {
@@ -88,3 +87,20 @@ container.addEventListener('scroll', function(){
   }
   navBar.removeAttribute("initial-load");
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  loadComponent('section-homepage', 'components/homepage/homepage.html');
+  loadComponent('section-about-me', 'components/about-me/about-me.html');
+  loadComponent('section-experience', 'components/experience/experience.html');
+  loadComponent('section-projects', 'components/projects/projects.html');
+  loadComponent('section-contact', 'components/contact/contact.html');
+});
+
+function loadComponent(containerId, filePath) {
+  fetch(filePath)
+      .then(response => response.text())
+      .then(html => {
+          document.getElementById(containerId).innerHTML = html;
+      })
+      .catch(error => console.error('Error loading component:', error));
+}

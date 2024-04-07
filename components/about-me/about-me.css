@@ -9,5 +9,8 @@
 --font-family: 'Courier New', Courier, monospace; */
 
 #section-about-me {
-  background-color: rgb(173, 190, 255);
+  background-color: var(--homepage-grid-colour);
+  display: grid;
+  grid-template-columns: repeat(7, 14.3vw);
+  grid-template-rows: repeat(5, 20vh);
 }
