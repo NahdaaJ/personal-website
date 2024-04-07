@@ -1,5 +1,5 @@
 # Web Portfolio Project 🌸
-🎀[Current Website Demo](https://nahdaaj.github.io/personal-website/)🎀
+🎀[nahdaaajawed.com](nahdaaajawed.com)🎀
 
 </div>
 
@@ -15,7 +15,10 @@
 
 ## What's Inside?
 - [`index.html`](index.html): The main HTML file for the website, including all the sections and navigation bar!
-- [`styles/index.css`](styles/index.css): The main CSS file for styling the website.
+- [`styles/`](styles/): The main CSS file for styling the website.
+  -  [`styles/base/`](styles/base/): In this directory, I store important variables and styling that is used throughout every component.
+  -  [`styles/components/`](styles/components/): This folder stores all the components separately, such as each section and the navigation.
+  -  [`styles/responsive/`](styles/responsive/): All the CSS files that correspond to different screen sizes are found here.
 - [`scripts/index.js`](scripts/index.js): The main JavaScript file for adding interactivity to the website.
 - [`images/`](images/): Directory containing images used in the website, some of which were drawn by me!
 - [`icons/`](icons/): Directory containing icons used in the website.
@@ -23,6 +26,10 @@
 ## Current Progress
 
 This project is a work in progress! I have no set deadline for when I aim to finish this project, and will be taking it at my own pace!! Even after "finishing", I will be maintaining and updating the site with better/cooler features! ♡( •ॢ◡-ॢ)✧˖° ♡
+
+I have just finished adding responsiveness and also structured my folder structure in a more organised manner. I split my CSS into different files depending on the functionality, which will make adding to and maintaining the website much easier in the future! 
+
+Creating the `About Me` section is next on the agenda!
 
 ## Get in Touch! 🌸
 
