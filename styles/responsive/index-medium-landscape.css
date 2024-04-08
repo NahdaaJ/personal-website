@@ -6,6 +6,12 @@
 @import "/components/contact/contact.css";
 
 @media (min-width: 800px) and (max-width: 1024px) and (max-height: 740px) {
+
+  /* #section-homepage{
+    background-color: red;
+  } */
+
+
 /* NAVIGATION BAR ----------------------------------------------------------------------------------------*/
   #desktop-nav {
     display: none;
@@ -32,5 +38,31 @@
   #homepage-intro-text {
     grid-row: 3 / 6 ;
     grid-column: 4 / 7;
+  }
+
+  /*ABOUT ME -----------------------------------------------------------------------------------------------*/
+  #about-me-content {
+    grid-template-columns: repeat(7, 14.3vw);
+    grid-template-rows: repeat(5, 20vh);
+  }
+
+  #am-text-div > h1 {
+    font-size: 5vw;
+    margin: 2vh 0;
+  }
+  
+  #am-text-div > p {
+    font-size: 1.6vw;
+  }
+
+  #am-tech-stack {
+    margin-top:3vw;
+    gap:1vh;
+    width:80vw;
+  }
+
+  .am-tech-icons {
+    height: 4vh;
+    margin: 0 1vh;
   }
 }
