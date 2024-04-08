@@ -19,8 +19,8 @@
 
 #homepage-content {
   display: grid;
-  grid-template-columns: repeat(11, minmax(100px, 300px));
-  grid-template-rows: repeat(15, 6vh);
+  grid-template-columns: repeat(11, calc(100vw/11));
+  grid-template-rows: repeat(15, calc((100vh - 100px)/15));
 }
 
 /*-----------------------------------------IMAGES-----------------------------------------*/
