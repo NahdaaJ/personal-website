@@ -1,6 +1,6 @@
 @import '/styles/base/variables.css';
 @import "/styles/base/base-styling.css";
-@import "/styles/base/animations.css";
+/* @import "/styles/base/animations.css"; */
 
 /* --homepage-background-colour: #ffe4e4ff;
 --homepage-grid-colour: #fff2f2;
@@ -9,16 +9,15 @@
 --text-colour: #b53a72;
 --font-family: 'Courier New', Courier, monospace; */
   
-[animate="true"]{
+/* [animate="true"]{
   animation: textAppearReverse 1.5s ease;
   opacity: 0;
 }
 
 [animate="false"]{
   animation: textAppear 1.5s ease;
-  /* animation-delay: 0.15s; */
   opacity: 1;
-}
+} */
 
 #about-me-content {
   background-color: var(--homepage-grid-colour);
