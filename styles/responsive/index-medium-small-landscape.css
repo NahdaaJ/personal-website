@@ -6,6 +6,12 @@
 @import "/components/contact/contact.css";
 
 @media (min-width: 601px) and (max-width: 800px) and (max-height: 1040px){
+
+    #section-homepage{
+    background-color: red;
+  }
+
+
   /* NAVIGATION BAR ----------------------------------------------------------------------------------------*/
   #desktop-nav {
     display: none;
@@ -22,8 +28,8 @@
 
   /*HOMEPAGE -----------------------------------------------------------------------------------------------*/
   #homepage-content {
-    grid-template-columns: repeat(7, minmax(100px, 300px));
-    grid-template-rows: repeat(4, 25vh);
+    grid-template-columns: repeat(7, calc(100vw/7));
+    grid-template-rows: repeat(4, calc(100vh/4));
   }
 
   /* Homepage Image ++++++++++++++++++++++++++++++++*/
@@ -47,3 +53,42 @@
     font-size: 1.7vw;
   }
 }
+
+  /*HOMEPAGE -----------------------------------------------------------------------------------------------*/
+  #about-me-content {
+    grid-template-rows: repeat(5, calc(100vh/5));
+  }
+
+  #am-text-div {
+    grid-row: 2 / 4 ;
+    grid-column: 2 / 6;
+  }
+
+  #am-tech-stack {
+    display: block;
+    gap:0px;
+  }
+
+  .am-stack-split{
+    margin: 10px 5px;
+  }
+
+  .am-tech-icons {
+    height:3vh;
+  }
+
+  @media (max-height: 700px){
+    #am-text-div > h1 {
+      font-size: 5vh;
+    }
+    
+    #am-text-div > p {
+      font-size: 2.5vh;
+      font-family: var(--font-family2);
+    }
+
+    .am-stack-split{
+      margin: 10px 1px;
+    }
+    
+  }
