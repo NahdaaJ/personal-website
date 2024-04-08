@@ -16,4 +16,30 @@
   #phone-nav {
     display: none;
   }
+
+  /* ABOUT ME ----------------------------------------------------------------------------------------*/
+
+  @media (min-height: 1100px){
+    #am-text-div {
+      grid-column: 2 / 6;
+    }
+  }
+
+  @media (min-height: 1850px){
+    #am-tech-stack {
+      display: block;
+      gap:10px;
+    }
+  
+    .am-tech-icons {
+      height: 4vh;
+      margin: 10px 10px;
+    }
+  }
+
+  @media (min-height: 2000px){
+    #am-tech-stack {
+      grid-row: 5;
+    }
+  }
 }

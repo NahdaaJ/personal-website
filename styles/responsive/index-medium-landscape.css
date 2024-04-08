@@ -24,8 +24,8 @@
 
   /*HOMEPAGE -----------------------------------------------------------------------------------------------*/
   #homepage-content {
-    grid-template-columns: repeat(7, minmax(100px, 300px));
-    grid-template-rows: repeat(7, 14.3vh);
+    grid-template-columns: repeat(7, calc(100vw/7));
+    grid-template-rows: repeat(7, calc(100vh/7));
   }
 
   /* Homepage Image ++++++++++++++++++++++++++++++++*/
@@ -42,8 +42,8 @@
 
   /*ABOUT ME -----------------------------------------------------------------------------------------------*/
   #about-me-content {
-    grid-template-columns: repeat(7, 14.3vw);
-    grid-template-rows: repeat(5, 20vh);
+    grid-template-columns: repeat(7, calc(100vw/7));
+    grid-template-rows: repeat(5, calc(100vh/5));
   }
 
   #am-text-div > h1 {
@@ -64,5 +64,17 @@
   .am-tech-icons {
     height: 4vh;
     margin: 0 1vh;
+  }
+
+  @media (max-height: 450px){
+    #am-text-div {
+      grid-column: 2 / 6;
+    }
+  }
+
+  @media (max-height: 340px){
+    #am-text-div {
+      grid-column: 2 / 7;
+    }
   }
 }
