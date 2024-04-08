@@ -7,9 +7,9 @@
 
 @media (min-width: 800px) and (max-width: 1024px) and (min-height: 740px) {
  
-  /* #section-homepage{
+  #section-homepage{
     background-color: red;
-  } */
+  }
 
 
   /* NAVIGATION BAR ----------------------------------------------------------------------------------------*/
@@ -84,12 +84,53 @@
     width:60vw;
   }
 
+  #am-text-div > h1 {
+    font-size: 5vh;
+  }
+  
+  #am-text-div > p {
+    font-size: 2vh;
+  }
+
   #am-tech-stack {
+    display: block;
     gap:10px;
   }
 
   .am-tech-icons {
     height: 4vh;
-    margin: 0 10px;
+    margin: 10px 10px;
+  }
+
+  @media ( max-height: 1760px ){
+    #am-text-div > h1 {
+      font-size: 5vh;
+    }
+    
+    #am-text-div > p {
+      font-size: 2vh;
+    }
+  }
+
+  @media (min-height: 1760px) and (max-height: 2340px) {
+    #am-text-div > h1 {
+      font-size: 5vh;
+    }
+    
+    #am-text-div > p {
+      font-size: 1.7vh;
+    }
+  }
+
+  @media (min-height: 2340px) {
+
+    #am-tech-stack {
+      display: block;
+      gap:10px;
+    }
+
+    #am-tech-stack {
+      grid-row: 5 / 6;
+    }
   }
 }
