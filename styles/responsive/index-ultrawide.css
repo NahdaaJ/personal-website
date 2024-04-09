@@ -1,0 +1,119 @@
+@import "/components/navigation/navigation.css";
+@import "/components/homepage/homepage.css";
+@import "/components/about-me/about-me.css";
+@import "/components/experience/experience.css";
+@import "/components/projects/projects.css";
+@import "/components/contact/contact.css";
+
+@media (min-width: 2600px) {
+/* 
+  #section-homepage{
+    background-color: red;
+  } */
+  /* NAVIGATION BAR ----------------------------------------------------------------------------------------*/
+
+  #phone-nav {
+    display: none;
+  }
+
+  /* HOMEPAGE ----------------------------------------------------------------------------------------*/
+  #homepage-cartoon {
+    grid-row: 4 /11;
+    grid-column: 4/ 6;
+    align-self: center;
+    justify-self: center;
+    position: relative;
+  }
+  
+  
+  #cartoon-me,#blob {
+    height:17vw;
+  }
+
+  #star1{
+    top:3vw;
+    left:1-vw;
+  }
+  
+  #star2{
+    bottom:7vw;
+    left:0.5vw;
+  }
+  
+  #star3{
+    top:2vw;
+    right:1vw;
+  }
+  
+  #star4{
+    top:0vw;
+    right:5vw;
+  }
+  
+  #star5{
+    bottom:4vw;
+    right:0vw;
+    height: 1vw;
+  }
+  
+  #star6{
+    top:6vw;
+    right:2vw;
+  }
+
+  .click-icons {
+    height:3vw;
+  }
+  
+  .click-icons:hover {
+    height:3.2vw;
+  }
+
+  #hp-linkedin {
+    top:0vh;
+    left:2vw;
+  }
+  
+  #hp-github {
+    top: 8vw;
+    right:0vw;
+  }
+
+  #homepage-intro-text {
+    grid-row: 5 / 9 ;
+    grid-column: 6 / 11;
+    line-height: 2vw;
+    margin-left: 1vw;
+    margin-top: 2vw;
+  }
+  
+  #homepage-top-line, #homepage-bottom-line {
+    font-size: 1.2vw;
+  }
+
+  #homepage-bottom-line {
+    line-height:2.5vw;
+  }
+  
+  #homepage-mid-line {
+    height: 4vw;
+  }
+
+  #homepage-mid-line > img {
+    height: 4vw;
+  }
+
+  #homepage-btns > button {
+    box-shadow: 0px 15px 0px var(--text-colour);
+    padding: 0.5vw 3vw;
+    border-radius: 0.8vw;
+    margin: 0px 5px;
+    font-size: 1vw;
+  }
+
+  #homepage-btns > button:active {
+    box-shadow: 0px 0px 0px var(--text-colour);
+    transform: translateY(16px);
+  }
+
+}
