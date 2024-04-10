@@ -1,5 +1,5 @@
 # Web Portfolio Project 🌸
-🎀[nahdaaajawed.com](nahdaaajawed.com)🎀
+🎀[nahdaajawed.com](nahdaajawed.com)🎀
 
 </div>
 
@@ -15,9 +15,14 @@
 
 ## What's Inside?
 - [`index.html`](index.html): The main HTML file for the website, including all the sections and navigation bar!
+- [`components/`](components/):  This directory hosts all the different components and their styling that come together to create the site!
+  - [`components/homepage`](components/homepage/):  This directory contains the html and css for the **homepage** section.
+  - [`components/about-me`](components/about-me/):  This directory contains the html and css for the **about-me** section.
+  - [`components/experience`](components/about-me/):  This directory contains the html and css for the **experience** section.
+  - [`components/about-me`](components/projects/):  This directory contains the html and css for the **projects** section.
+  - [`components/about-me`](components/contact/):  This directory contains the html and css for the **contact** section.
 - [`styles/`](styles/): The main CSS file for styling the website.
   -  [`styles/base/`](styles/base/): In this directory, I store important variables and styling that is used throughout every component.
-  -  [`styles/components/`](styles/components/): This folder stores all the components separately, such as each section and the navigation.
   -  [`styles/responsive/`](styles/responsive/): All the CSS files that correspond to different screen sizes are found here.
 - [`scripts/index.js`](scripts/index.js): The main JavaScript file for adding interactivity to the website.
 - [`images/`](images/): Directory containing images used in the website, some of which were drawn by me!
@@ -27,9 +32,7 @@
 
 This project is a work in progress! I have no set deadline for when I aim to finish this project, and will be taking it at my own pace!! Even after "finishing", I will be maintaining and updating the site with better/cooler features! ♡( •ॢ◡-ॢ)✧˖° ♡
 
-I have just finished adding responsiveness and also structured my folder structure in a more organised manner. I split my CSS into different files depending on the functionality, which will make adding to and maintaining the website much easier in the future! 
-
-Creating the `About Me` section is next on the agenda!
+I have just finished adding the `About Me` section and it's responsiveness! However, I don't think I'm utilising CSS grid and flexbox in the best way I can, so I will be attempting that with current sections and the next section on the agenda, `Projects`.
 
 ## Get in Touch! 🌸
 
