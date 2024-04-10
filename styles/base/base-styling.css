@@ -61,16 +61,20 @@ button {
 }
 /* -------------------------------------SIZING------------------------------------------ */
 
-.container {
+.container[phoneScreen="false"] {
   height: 100vh;
   overflow-y: hidden;
   scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
 }
 
-section {
+[phoneScreen="false"] section {
   height: 100vh;
   scroll-snap-align: start;
+}
+
+.container[phoneScreen="true"],[phoneScreen="true"] section{
+  height: 100vh;
+  /* overflow-y: hidden; */
 }
 
 .section-content {

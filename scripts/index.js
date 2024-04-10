@@ -1,11 +1,48 @@
 const container = document.querySelector('.container');
 const navBar = document.querySelector('nav');
-const phoneNav = document.querySelector('#phone-nav')
+const phoneNav = document.querySelector('#phone-nav');
+let  phoneNavComputedStyle = window.getComputedStyle(phoneNav);
+let navComputedStyle = window.getComputedStyle(navBar);
 
+// ON LOAD +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+function loadComponent(containerId, filePath) {
+  fetch(filePath)
+      .then(response => response.text())
+      .then(html => {
+          document.getElementById(containerId).innerHTML = html;
+      })
+      .catch(error => console.error('Error loading component:', error));
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  loadComponent('section-homepage', 'components/homepage/homepage.html');
+  loadComponent('section-about-me', 'components/about-me/about-me.html');
+  loadComponent('section-experience', 'components/experience/experience.html');
+  loadComponent('section-projects', 'components/projects/projects.html');
+  loadComponent('section-contact', 'components/contact/contact.html');
+});
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+// FUNCTIONS ------------------------------------------------------------------------------
 function tempFunction() {
   alert("You got pranked! (つ≧▽≦)つ")
 }
 
+function customScroll(event) {
+  const currentPhoneNavState = phoneNav.getAttribute("expanded");
+  event.preventDefault();
+
+  if (currentPhoneNavState !== "true") {
+    const delta = Math.sign(event.deltaY);
+    const scrollAmount = 500;
+
+    container.scrollBy({
+      top: delta * scrollAmount,
+      behavior: "smooth"
+    });
+  }
+}
 
 function expandPhoneMenu() {
   const currentPhoneNavState = phoneNav.getAttribute("expanded");
@@ -18,20 +55,48 @@ function expandPhoneMenu() {
   }
 }
 
-container.addEventListener('wheel', (event) => {
+
+
+function scrollToSection(sectionName){
+  const section = document.getElementById(sectionName);
   const currentPhoneNavState = phoneNav.getAttribute("expanded");
-  event.preventDefault();
 
-  if (currentPhoneNavState !== "true") {
-        const delta = Math.sign(event.deltaY);
-    const scrollAmount = 500;
-
-    container.scrollBy({
-      top: delta * scrollAmount,
-      behavior: "smooth"
-    });
+  if (currentPhoneNavState === "true"){
+    phoneNav.setAttribute("expanded", "false");
   }
-});
+
+  if(section) {
+    section.scrollIntoView({behavior: "smooth"})
+  }
+}
+
+// EVENT LISTENER ------------------------------------------------------------------------------
+
+// container.addEventListener('wheel', (event) => {
+//   const currentPhoneNavState = phoneNav.getAttribute("expanded");
+//   event.preventDefault();
+
+//   if (currentPhoneNavState !== "true") {
+//         const delta = Math.sign(event.deltaY);
+//     const scrollAmount = 500;
+
+//     container.scrollBy({
+//       top: delta * scrollAmount,
+//       behavior: "smooth"
+//     });
+//   }
+// });
+
+
+if (phoneNavComputedStyle.getPropertyValue('display') === 'none'){
+  container.addEventListener('wheel', customScroll);
+  container.setAttribute("phoneScreen", "false");
+}
+else if (navComputedStyle.getPropertyValue('display') === 'none'){
+  container.removeEventListener('wheel', customScroll);
+  container.setAttribute("phoneScreen", "true");
+}
+
 
 container.addEventListener('keydown', (event) => {
   const scrollAmount = 0;
@@ -49,33 +114,6 @@ container.addEventListener('keydown', (event) => {
   });
 });
 
-function scrollToSection(sectionName){
-  const section = document.getElementById(sectionName);
-  const currentPhoneNavState = phoneNav.getAttribute("expanded");
-  
-  if (currentPhoneNavState === "true"){
-    phoneNav.setAttribute("expanded", "false");
-  }
-
-  if(section) {
-    section.scrollIntoView({behavior: "smooth"})
-  }
-}
-
-function scrollToTop(){
-  const currentPhoneNavState = phoneNav.getAttribute("expanded");
-
-  if (currentPhoneNavState === "true"){
-    phoneNav.setAttribute("expanded", "false");
-  }
-
-  container.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-}
-
-
 container.addEventListener('scroll', function(){
   const homepageSection = document.querySelector('[is-homepage="true"]');
   const isHomepage = homepageSection.getBoundingClientRect().top === 0;
@@ -88,19 +126,3 @@ container.addEventListener('scroll', function(){
   navBar.removeAttribute("initial-load");
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  loadComponent('section-homepage', 'components/homepage/homepage.html');
-  loadComponent('section-about-me', 'components/about-me/about-me.html');
-  loadComponent('section-experience', 'components/experience/experience.html');
-  loadComponent('section-projects', 'components/projects/projects.html');
-  loadComponent('section-contact', 'components/contact/contact.html');
-});
-
-function loadComponent(containerId, filePath) {
-  fetch(filePath)
-      .then(response => response.text())
-      .then(html => {
-          document.getElementById(containerId).innerHTML = html;
-      })
-      .catch(error => console.error('Error loading component:', error));
-}
