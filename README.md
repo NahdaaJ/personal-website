@@ -1,5 +1,5 @@
 # Web Portfolio Project 🌸
-🎀[nahdaajawed.com](nahdaajawed.com)🎀
+🎀<a href="https://nahdaajawed.com/" target="_blank">nahdaajawed.com</a>🎀
 
 </div>
 
