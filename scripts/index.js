@@ -1,8 +1,8 @@
 const container = document.querySelector('.container');
-const navBar = document.querySelector('nav');
-const phoneNav = document.querySelector('#phone-nav');
-let  phoneNavComputedStyle = window.getComputedStyle(phoneNav);
-let navComputedStyle = window.getComputedStyle(navBar);
+// const navBar = document.querySelector('nav');
+// const phoneNav = document.querySelector('#phone-nav');
+// let  phoneNavComputedStyle = window.getComputedStyle(phoneNav);
+// let navComputedStyle = window.getComputedStyle(navBar);
 
 // ON LOAD +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function loadComponent(containerId, filePath) {
@@ -15,12 +15,12 @@ function loadComponent(containerId, filePath) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  loadComponent('desktop-nav', 'content/nav.html');
   loadComponent('section-homepage', 'content/homepage.html');
-  // loadComponent('section-about-me', 'content/about-me.html');
-  // loadComponent('section-experience', 'content/experience.html');
-  // loadComponent('section-projects', 'content/projects.html');
-  // loadComponent('section-contact', 'content/contact.html');
+  loadComponent('navigation', 'content/nav.html');
+  loadComponent('section-about-me', 'content/about-me.html');
+  loadComponent('section-experience', 'content/experience.html');
+  loadComponent('section-projects', 'content/projects.html');
+  loadComponent('section-contact', 'content/contact.html');
 });
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -60,15 +60,7 @@ function tempFunction() {
 
 function scrollToSection(sectionName){
   const section = document.getElementById(sectionName);
-  const currentPhoneNavState = phoneNav.getAttribute("expanded");
-
-  if (currentPhoneNavState === "true"){
-    phoneNav.setAttribute("expanded", "false");
-  }
-
-  if(section) {
-    section.scrollIntoView({behavior: "smooth"})
-  }
+  section.scrollIntoView({behavior: "smooth"});
 }
 
 // EVENT LISTENER ------------------------------------------------------------------------------

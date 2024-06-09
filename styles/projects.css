@@ -1,13 +1,7 @@
 @import '/styles/base/variables.css';
-@import "/styles/base/base-styling.css";
-
-/* --homepage-background-colour: #ffe4e4ff;
---homepage-grid-colour: #fff2f2;
---accent-colour1:#ffa1b0;
---accent-colour2: #ef778f;
---text-colour: #b53a72;
---font-family: 'Courier New', Courier, monospace; */
+@import '/styles/base/animations.css';
+@import '/styles/base/base.css';
 
 #section-projects {
-  background-color: rgb(173, 190, 255);
+  background-color: #ffa1b0;
 }
