@@ -13,13 +13,14 @@
   position: fixed;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 0px;
   top: 0;
   left: 0;
   right: 0;
   height: 100px;
   padding-top:20px;
+  background-color: aqua;
 }
 
 [initial-load="true"] #logo {
@@ -44,47 +45,15 @@
   color: var(--accent-colour1);
 }
 
-/* .nav-button:active {
-} */
-
-#logo {
-  transition: color 0.5s ease;
-  display: flex;
-}
-
-#logo > img {
-  height: 80px;
-  align-items: center;
-}
-
-@keyframes bigNav {
+@keyframes navFadeIn {
   0% {
-    visibility: hidden;
-    margin-left: 0px;
     opacity: 0;
+    left: -100px;
   }
   100% {
-    height: 80px;
-    margin-left: 26vw;
-    opacity: 1;
-    visibility: visible;
-  }
-}
 
-@keyframes reverseNav {
-  0% {
-    margin-left: 26vw;
-    opacity: 1;
-    height: 80px;
-    visibility: visible;
   }
-
-  100% {
-    margin-left: 26px;
-    opacity: 0;
-    height: 0px;
-    visibility: hidden;
-  }
+  
 }
 
 [homepage-nav="true"] img {

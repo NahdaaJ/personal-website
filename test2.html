@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Icon Animations</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #ffe4e4ff;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .animation-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    
+    .star {
+      width: 50px; /* Adjust size as needed */
+      height: 50px; /* Adjust size as needed */
+      margin: 10px;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+    
+    /* Twinkling */
+    @keyframes twinkling {
+      0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0px gold);
+      }
+      100% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 20px gold);
+      }
+    }
+    .twinkling {
+      animation: twinkling 2s ease-in-out infinite alternate;
+    }
+    
+    /* Bouncing */
+    @keyframes bouncing {
+      0%, 100% {
+        transform: translateY(0);
+        filter: drop-shadow(0 0 0px #ffd700);
+      }
+      50% {
+        transform: translateY(-5px);
+        filter: drop-shadow(0 0 20px gold);
+      }
+    }
+    .bouncing {
+      animation-name: bouncing;
+    }
+    
+    /* Rotation */
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    .rotate {
+      animation-name: rotate;
+    }
+    
+    /* Color Changing */
+    @keyframes color-change {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+    .color-change {
+      animation-name: color-change;
+    }
+    
+    /* Pulsating */
+    @keyframes pulsate {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+    .pulsate {
+      animation-name: pulsate;
+    }
+    
+    /* Glowing */
+    @keyframes glow {
+      0% {
+        filter: drop-shadow(0 0 10px gold);
+      }
+      50% {
+        filter: drop-shadow(0 0 20px gold);
+      }
+      100% {
+        filter: drop-shadow(0 0 10px gold);
+      }
+    }
+    .glow {
+      animation-name: glow;
+    }
+  </style>
+</head>
+<body>
+  <div class="animation-container">
+    <!-- Twinkling -->
+    <img src="images/star.png" alt="Star" class="star twinkling">
+    
+    <!-- Bouncing -->
+    <img src="images/star.png" alt="Star" class="star bouncing">
+    
+    <!-- Rotation -->
+    <img src="images/star.png" alt="Star" class="star rotate">
+    
+    <!-- Color Changing -->
+    <img src="images/star.png" alt="Star" class="star color-change">
+    
+    <!-- Pulsating -->
+    <img src="images/star.png" alt="Star" class="star pulsate">
+    
+    <!-- Glowing -->
+    <img src="images/star.png" alt="Star" class="star glow">
+  </div>
+</body>
+</html>

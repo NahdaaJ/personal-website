@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover to Bring to Front</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            width: 150px;
+            height: 200px;
+            background-color: lightblue;
+            border: 1px solid #ccc;
+            transition: all 0.3s ease;
+            position: absolute;
+        }
+
+        .card:nth-child(1) {
+            left: 0;
+            background-color: lightgreen;
+        }
+
+        .card:nth-child(2) {
+            left: 100px;
+        }
+
+        .card:nth-child(3) {
+            left: 200px;
+            background-color: blanchedalmond;
+        }
+
+        .card:hover {
+            z-index: 10; /* Bring to front */
+            transform: scale(1.1); /* Optional: Make the card slightly larger on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for a better visual effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+    <div class="card">Card 3</div>
+</body>
+</html>
