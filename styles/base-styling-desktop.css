@@ -1,0 +1,121 @@
+@import 'variables.css';
+
+body[mode="night"]{
+        background-image:
+        linear-gradient(to right, var(--grid-colour) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-colour) 1px, transparent 1px);
+    
+        /* Optional: Set other background properties */
+        background-color: var(--background-colour); /* Light background color */
+
+}
+
+[mode="night"] {
+    p {
+        color: var(--text-colour-1)
+    }
+
+    h1 {
+        color: var(--text-colour-1)
+    }
+
+    h2 {
+        color: var(--text-colour-2)
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--box-colour);
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--base-font);
+    background-size: 100px 100px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+}
+
+h1{
+    font-weight: 400;
+    font-size: 130px;
+    line-height: 20px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 0;
+}
+
+.emphasis {
+    font-weight: 800;
+}
+
+#main-container {
+    display: flex;
+    width: 1200px;
+    height: 90vh;
+}
+
+#title-container {
+    width: 500px;
+}
+
+#contact-links{
+    display: flex;
+    flex-direction: row;
+}
+
+#content-container {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    height: 70px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px var(--shadow-colour);
+    clip-path: inset(0 0 -20px);
+}
+
+main {
+    flex-grow: 1;
+    overflow-y: scroll;
+    
+}
+
+.content-box{
+    height: 100px;
+    width: 100px;
+    background-color: var(--box-colour);
+    border-radius: var(--radius);
+}
+
+#nightmode-container {
+    height: 70px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 0 10px var(--shadow-colour);
+    clip-path: inset(-15px 0 0);
+}

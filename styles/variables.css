@@ -1,0 +1,20 @@
+:root {
+    /*Content Box*/
+    --radius: 30px;
+    
+    /*Font*/
+    --base-font: "Outfit", sans-serif;
+
+    /*Night Mode Colours*/
+    --background-colour:#463F3A;
+    --grid-colour:#403935;
+    --box-colour: #68605B;
+    --inactive-nav-button-colour: #8A817C;
+    --active-nav-button-colour: #FFD5D5;
+    --inactive-mode-colour: #68605B;
+    --active-mode-colour: #BCB8B1;
+    --text-colour-1:#F4F3EE;
+    --text-colour-2:#FFD5D5;
+    --icon-colour:#FFD5D5;
+    --shadow-colour: #2f2c2a;
+}
