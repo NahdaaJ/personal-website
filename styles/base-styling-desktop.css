@@ -31,7 +31,6 @@ body[mode="night"]{
 body{
     margin: 0;
     padding: 0;
-    height: 100vh;
 
     font-family: var(--base-font);
     background-size: 100px 100px;
@@ -106,6 +105,8 @@ header {
     align-items: center;
     background-color: var(--grid-colour);
     border-radius: 30px;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.395));
+
 }
 
 nav.sticky-bars {
@@ -120,13 +121,9 @@ nav {
     display: flex;
 }
 
-
-#main-section {
-    margin: 50px 0;
-}
-
 section {
     min-height: calc(100vh - 200px);
+    padding: 100px 20px;
 }
 
 .content-box{
