@@ -1,10 +1,15 @@
+const body = document.getElementsByTagName("body")[0];
+
+if (localStorage.getItem('theme') === 'day') {
+    body.setAttribute("mode", "day");
+  }
+
 function scrollToSection(section){
     const targetSection = document.getElementById(section);
     targetSection.scrollIntoView({ behavior: "smooth" });
 }
 
 function changeModeTo(targetMode) {
-    const body = document.getElementsByTagName("body")[0];
-  
-      body.setAttribute("mode", targetMode);
-  }
+    body.setAttribute("mode", targetMode);
+    localStorage.setItem('theme', 'day');
+}
