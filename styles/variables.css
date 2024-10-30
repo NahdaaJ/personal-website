@@ -6,15 +6,29 @@
     --base-font: "Outfit", sans-serif;
 
     /*Night Mode Colours*/
-    --background-colour:#463F3A;
-    --grid-colour:#403935;
-    --box-colour: #68605B;
-    --inactive-nav-button-colour: #8A817C;
-    --active-nav-button-colour: #FFD5D5;
-    --inactive-mode-colour: #68605B;
-    --active-mode-colour: #BCB8B1;
-    --text-colour-1:#F4F3EE;
-    --text-colour-2:#FFD5D5;
-    --icon-colour:#FFD5D5;
-    --shadow-colour: #2f2c2a;
+    --nm-background-colour:#463F3A;
+    --nm-grid-colour:#403935;
+    --nm-box-colour: #68605B;
+    --nm-inactive-nav-button-colour: #8A817C;
+    --nm-active-nav-button-colour: #FFD5D5;
+    --nm-inactive-mode-colour: #68605B;
+    --nm-active-mode-colour: #BCB8B1;
+    --nm-text-colour-1:#F4F3EE;
+    --nm-text-colour-2:#FFD5D5;
+    --nm-icon-colour:#FFD5D5;
+    --nm-shadow-colour: rgba(0, 0, 0, 0.395);
+
+    /*Day Mode Colours*/
+    --dm-background-colour:#F4F3EE;
+    --dm-grid-colour:#ffffff;
+    --dm-box-colour: #68605B;
+    --dm-inactive-nav-button-colour: #8A817C;
+    --dm-active-nav-button-colour: #FFD5D5;
+    --dm-inactive-mode-colour: #68605B;
+    --dm-active-mode-colour: #463f3a;
+    --dm-text-colour-1:#463f3a;
+    --dm-text-colour-2:#ca9c9c;
+    --dm-text-colour-3:#F4F3EE;
+    --dm-icon-colour:#ca9c9c;
+    --dm-shadow-colour: #8f8681;
 }

@@ -2,33 +2,90 @@
 
 body[mode="night"]{
         background-image:
-        linear-gradient(to right, var(--grid-colour) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--grid-colour) 1px, transparent 1px);
+        linear-gradient(to right, var(--nm-grid-colour) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--nm-grid-colour) 1px, transparent 1px);
     
         /* Optional: Set other background properties */
-        background-color: var(--background-colour); /* Light background color */
+        background-color: var(--nm-background-colour); /* Light background color */
 
 }
 
-[mode="night"] {
+[mode="night"] * {
     p {
-        color: var(--text-colour-1)
+        color: var(--nm-text-colour-1)
     }
 
     h1 {
-        color: var(--text-colour-1)
+        color: var(--nm-text-colour-1)
     }
 
     h2 {
-        color: var(--text-colour-2)
+        color: var(--nm-text-colour-2)
     }
 
     ::-webkit-scrollbar-thumb {
-        background-color: var(--box-colour);
+        background-color: var(--nm-box-colour);
     }
+
     .content-box {
-        color: var(--text-colour-1)
+        color: var(--nm-text-colour-1)
     }
+
+    .content-box{
+        background-color: var(--nm-box-colour);
+    }
+
+    .sticky-bars {        
+        background-color: var(--nm-grid-colour);          
+        filter: drop-shadow(0 0 5px var(--nm-shadow-colour));
+    }
+}
+
+body[mode="day"]{
+    background-image:
+    linear-gradient(to right, var(--dm-grid-colour) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--dm-grid-colour) 1px, transparent 1px);
+
+    /* Optional: Set other background properties */
+    background-color: var(--dm-background-colour); /* Light background color */
+
+}
+
+[mode="day"] * {
+
+    p {
+        color: var(--dm-text-colour-3)
+    }
+
+    h1 {
+        color: var(--dm-text-colour-1)
+    }
+
+    h2 {
+        color: var(--dm-text-colour-2)
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--dm-box-colour);
+    }
+
+    .content-box {
+        color: var(--dm-text-colour-1)
+    }
+
+    .content-box{
+        background-color: var(--dm-box-colour);
+    }
+
+    .sticky-bars {        
+        background-color: var(--dm-text-colour-2);
+        filter: drop-shadow(0 0 5px var(--dm-shadow-colour));
+    }
+
+    .sticky-bars p {
+        color: var(--dm-grid-colour)
+    }
+
 }
 
 body{
@@ -105,9 +162,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--grid-colour);
     border-radius: 30px;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.395));
 }
 
 nav.sticky-bars {
@@ -134,6 +189,5 @@ section {
 
 .content-box{
     padding: 20px;
-    background-color: var(--box-colour);
     border-radius: var(--radius);
 }
