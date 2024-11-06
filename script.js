@@ -11,7 +11,7 @@ function scrollToSection(section){
 
 function changeModeTo(targetMode) {
     body.setAttribute("mode", targetMode);
-    localStorage.setItem('theme', 'day');
+    localStorage.setItem('theme', targetMode);
 
     changeModeImages(targetMode);
 }
