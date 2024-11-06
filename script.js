@@ -12,4 +12,25 @@ function scrollToSection(section){
 function changeModeTo(targetMode) {
     body.setAttribute("mode", targetMode);
     localStorage.setItem('theme', 'day');
+
+    changeModeImages(targetMode);
 }
+
+function changeModeImages(targetMode) {
+    const dayModeImage = document.getElementById("dayModeImage");
+    const nightModeImage = document.getElementById("nightModeImage");
+
+    if (targetMode == "day") {
+        dayModeImage.src = "../icons/dm-active.png";
+        nightModeImage.src = "../icons/nm-inactive.png";
+    }
+    else {
+        dayModeImage.src = "../icons/dm-inactive.png";
+        nightModeImage.src = "../icons/nm-active.png";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    let currentMode = body.getAttribute("mode")
+    changeModeImages(currentMode);
+});

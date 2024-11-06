@@ -172,9 +172,9 @@ nav.sticky-bars {
     top:50px;
 }
 
-/* Temporary */
-.sticky-bars p {
+.sticky-bars img {
     cursor: pointer;
+    height: 30px;
 }
 
 div.sticky-bars {
