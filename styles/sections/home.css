@@ -1,2 +1,52 @@
 /* home styling */
 @import 'variables.css';
+
+#home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: calc(100vh - 115px);
+    margin-top: 115px;
+    font-family: var(--accent-font);
+}
+
+#home-logo {
+    height: 300px;
+    width: 300px;
+    margin-top: 115px;
+}
+
+#home-title {
+    color: var(--white);
+    font-weight: var(--regular-weight);
+    font-size: var(--heading1-size);
+    margin: 10px 0 -20px 0;
+}
+
+#home-title span {
+    color: var(--pink);
+}
+
+#home-subtitle {
+    color: var(--light-grey);
+    font-weight: var(--regular-weight);
+    font-size: var(--heading2-size);
+    width: 720px;
+}
+
+@media screen and (max-width: 1080px) {
+    #home-subtitle {
+        width: 400px;
+    }
+}
+
+#home-socials {
+    display: flex;
+    flex-direction: row;
+}
+
+#home-socials img {
+    height: 50px;
+    width: 50px;
+}

@@ -7,10 +7,6 @@ body {
     background-color: var(--black);
 }
 
-section {
-    height: 100vh;
-}
-
 #container {
     width: 1080px;
 }

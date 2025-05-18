@@ -1,6 +1,13 @@
 /* navbar styling */
 @import 'variables.css';
 
+#nav-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+}
 .nav-links{
     font-family: var(--accent-font);
 }

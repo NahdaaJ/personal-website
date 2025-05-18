@@ -1,7 +1,7 @@
 /* imports all css files */
 @import 'base.css';
 @import 'components/nav.css';
-@import 'home.css';
-@import 'experience.css';
-@import 'projects.css';
-@import 'contact.css';
+@import 'sections/home.css';
+@import 'sections/experience.css';
+@import 'sections/projects.css';
+@import 'sections/contact.css';
