@@ -6,9 +6,13 @@
     --accent-font: "Roboto Mono", monospace;
     
     --regular-weight: 400;
+    --thick-weight: 700;
 
     --heading1-size: 40px;
     --heading2-size: 24px;
+    --base-text-size: 22px;
+    --medium-text-size: 20px;
+    --small-text-size: 16px;
 
     /*Colours*/
     --nm-grid-colour:#403935;

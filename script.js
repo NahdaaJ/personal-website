@@ -10,4 +10,5 @@ function loadComponent(containerId, filePath) {
 document.addEventListener('DOMContentLoaded', function () {
   loadComponent('nav-container', 'section-content/nav.html');
   loadComponent('home-container', 'section-content/home.html');
+  loadComponent('experience-container', 'section-content/experience.html');
 });                
