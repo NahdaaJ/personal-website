@@ -1,5 +1,15 @@
 /* storage for colours and fonts */
 
-/* :root {
+:root {    
+    /*Font*/
+    --base-font: "Afacad", sans-serif;
+    --accent-font: "Roboto Mono", monospace;
 
-} */
+    /*Colours*/
+    --nm-grid-colour:#403935;
+    --white:#ffffff;
+    --pink:#DCA69E;
+    --light-grey:#8F8E8D;
+    --dark-grey:#312E2D;
+    --black:#1F1C1B;
+}

@@ -1,2 +1,16 @@
 /* all base styling */
 @import 'variables.css';
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--black);
+}
+
+section {
+    height: 100vh;
+}
+
+#container {
+    width: 1080px;
+}

@@ -1,1 +1,37 @@
 /* navbar styling */
+@import 'variables.css';
+
+.nav-links{
+    font-family: var(--accent-font);
+}
+
+#main-nav{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--black);
+    padding: 1rem 2rem;
+
+    align-items: center;
+
+    @media screen and (min-width: 1080px) {
+        gap: 50vw;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 1080px) {
+        justify-content: space-between;        
+    }
+}
+
+#logo {
+    display: inline;
+    height: 80px;
+}
+
+#nav-links-container{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    color: var(--pink);
+}
