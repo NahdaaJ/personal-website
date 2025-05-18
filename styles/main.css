@@ -1,6 +1,7 @@
 /* imports all css files */
 @import 'base.css';
 @import 'components/nav.css';
+@import 'components/skills-tag.css';
 @import 'sections/home.css';
 @import 'sections/experience.css';
 @import 'sections/projects.css';
