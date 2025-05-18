@@ -1,5 +1,5 @@
 /* experience styling */
-@import 'variables.css';
+@import '/styles/variables.css';
 
 #experience-container {
     display: flex;
@@ -49,11 +49,14 @@
 .skill {
     color: var(--black);
     font-family: var(--accent-font);
-    font-size: var(--small-text-size);
     font-weight: var(--thick-weight);
     background-color: var(--pink);
     padding: 5px 15px;
     border-radius: 20px;
+}
+
+.experience-skills .skill {
+    font-size: var(--small-text-size);
 }
 
 /* Responsive */

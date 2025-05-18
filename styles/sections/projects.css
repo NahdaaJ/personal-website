@@ -1,2 +1,67 @@
 /* projects styling */
-@import 'variables.css';
+@import '/styles/variables.css';
+
+#projects-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px 70px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: row;
+    width: 570px;
+    padding: 30px 0;
+    border: solid 2px var(--dark-grey);
+    border-radius: 40px;
+    justify-content: center;
+}
+
+.project-card-image {
+    width: 225px;
+    height: 225px;
+}
+
+.project-card-content{
+    width: 260px;
+    margin-left: 24px;
+}
+
+.project-title {
+    color: var(--pink);
+    font-family: var(--accent-font);
+    font-size: var(--heading2-size);
+    font-weight: var(--regular-weight);
+}
+
+.project-description {
+    color: var(--light-grey);
+    font-family: var(--base-font);
+    font-size: var(--small-text-size);
+    font-weight: var(--regular-weight);
+    margin-bottom: 15px;
+}
+
+.project-skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-skills .skill {
+    font-size: var(--tiny-text-size);
+}
+
+@media screen and (max-width: 1080px) {
+    .project-card-container {
+        grid-template-columns: 1fr;
+        gap: 30px 0;
+    }
+}

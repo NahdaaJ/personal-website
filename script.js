@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     loadComponent('nav-container', 'section-content/nav.html');
     loadComponent('home-container', 'section-content/home.html');
     loadComponent('experience-section', 'section-content/experience.html');
+    loadComponent('projects-container', 'section-content/projects.html');
 
     // Add new experience here
     setTimeout(() => {
