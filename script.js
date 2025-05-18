@@ -7,7 +7,7 @@ function loadComponent(containerId, filePath) {
         .catch(error => console.error('Error loading component:', error));
 }
 
-function loadExperienceCards(containerId, filePaths) {
+function loadCards(containerId, filePaths) {
     const container = document.getElementById(containerId);
     Promise.all(filePaths.map(path => fetch(path).then(res => res.text())))
         .then(cards => {
@@ -24,8 +24,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Add new experience here
     setTimeout(() => {
-        loadExperienceCards('experience-container', [
+        loadCards('experience-container', [
             'experience/default.html',
         ]);
+
+        loadCards('project-card-container', [
+            'projects/default.html',
+        ]);       
     }, 200);
 });

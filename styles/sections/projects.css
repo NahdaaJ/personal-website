@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.project-card-container {
+#project-card-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 45px 70px;
@@ -59,8 +59,8 @@
     font-size: var(--tiny-text-size);
 }
 
-@media screen and (max-width: 1080px) {
-    .project-card-container {
+@media screen and (max-width: 1300px) {
+    #project-card-container {
         grid-template-columns: 1fr;
         gap: 30px 0;
     }
