@@ -15,10 +15,12 @@
 #main-nav{
     display: flex;
     flex-direction: row;
-    background-color: var(--black);
+    background-color: var(--translucent-black);
     padding: 1rem 2rem;
-
     align-items: center;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
 
     @media screen and (min-width: 1080px) {
         gap: 50vw;

@@ -15,10 +15,10 @@
     --small-text-size: 16px;
 
     /*Colours*/
-    --nm-grid-colour:#403935;
     --white:#ffffff;
     --pink:#DCA69E;
     --light-grey:#8F8E8D;
     --dark-grey:#312E2D;
     --black:#1F1C1B;
+    --translucent-black: rgba(31, 28, 27, 0.7);
 }
