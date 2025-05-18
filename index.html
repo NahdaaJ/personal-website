@@ -1,73 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/base-styling-desktop.css">
+            <link rel="stylesheet" href="styles/main.css">
+        </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+        <body>
+            <h1>Hello, World!</h1>
+        </body>
 
-  <title>Home</title>
-</head>
-
-<body mode="night">
-  <div id="container">
-    <!-- Left Sidebar -->
-    <header>
-      <h1>nahdaa</h1>
-      <h1><span class="emphasis">jawed</span></h1>
-      <h2>software engineer | artist</h2>
-      <div id="contact-links">
-        <p>Link 1</p>
-        <p>Link 2</p>
-        <p>Link 3</p>
-      </div>
-    </header>
-  
-    <!-- Right Scrollable Content -->
-    <div id="content">
-      <nav class="sticky-bars">
-        <p onclick="scrollToSection('about-me')">about me</p>
-        <p onclick="scrollToSection('experience')">experience</p>
-        <p onclick="scrollToSection('projects')">projects</p>
-        <p onclick="scrollToSection('art')">art</p>
-        <p onclick="scrollToSection('contact')">contact</p>
-      </nav>
-      <div id="main-section">
-          <section id="about-me">
-            <h2>about me</h2>
-            <div class="content-box"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-          </section>
-          
-          <section id="experience">
-            <h2>experience</h2>
-          </section>
-
-          <section id="projects">
-            <h2>projects</h2>
-          </section>
-
-          <section id="art">
-            <h2>art</h2>
-          </section>
-          
-          <section id="contact">
-            <h2>contact</h2>
-          </section>
-      </div>
-      <div class="sticky-bars">
-        <img id="dayModeImage" title="Day Mode" src="icons/dm-inactive.png" onclick="changeModeTo('day')">
-        <img id="nightModeImage" title="Night Mode" src="icons/nm-active.png" onclick="changeModeTo('night')">
-      </div>
-  
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-
-</body>
-
-</html>
+        <script src="script.js"></script>
+    </html>

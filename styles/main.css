@@ -1,0 +1,6 @@
+/* imports all css files */
+@import 'base.css';
+@import 'home.css';
+@import 'experience.css';
+@import 'projects.css';
+@import 'contact.css';
