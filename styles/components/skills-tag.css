@@ -9,7 +9,7 @@
     border-radius: 20px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (max-width: 800px) {
     .skill {
         padding: 3px 10px;
     }    
