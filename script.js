@@ -87,7 +87,8 @@ document.addEventListener('DOMContentLoaded', function () {
         ]);
 
         loadCards('project-card-container', [
-            'projects/default.html',
+            'projects/stardewApi.html',
+            'projects/pomodoro-timer.html',
         ]);       
 
         observeSection();
