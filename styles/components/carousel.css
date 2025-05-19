@@ -1,7 +1,7 @@
 .carousel-heading {
   display: flex;
   align-items: center; /* Vertically center children */
-  width: 100vw;
+  width: 100%;
   height: 80px;
   left: 0;
   right: 0;
