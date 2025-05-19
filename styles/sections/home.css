@@ -70,9 +70,16 @@
 }
 
 @media screen and (max-width: 800px) {
+
+    #home-section {
+        padding-top: 0;
+        height: 100vh;
+        justify-content: center;
+    }
     #home-logo {
         height: 280px;
         width: 280px;
+        margin-top: 0;
     }
 
     #home-title{

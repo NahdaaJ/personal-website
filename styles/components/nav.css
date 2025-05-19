@@ -57,7 +57,7 @@
 }
 
 @media screen and (max-width: 800px) {
-    #main-nav{
+    #main-nav, #nav-container{
         display: none;
     }    
 }
