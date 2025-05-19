@@ -71,7 +71,6 @@ function setContactJs(){
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Load all components
     Promise.all([
         loadComponent('nav-container', 'section-content/nav.html'),
         loadComponent('home-container', 'section-content/home.html'),
@@ -79,7 +78,6 @@ document.addEventListener('DOMContentLoaded', function () {
         loadComponent('projects-container', 'section-content/projects.html'),
         loadComponent('contact-container', 'section-content/contact.html')
     ]).then(() => {
-        // Now load cards
         return Promise.all([
             loadCards('experience-card-container', [
                 'experience/lexisnexis.html',
@@ -92,15 +90,13 @@ document.addEventListener('DOMContentLoaded', function () {
             ])
         ]);
     }).then(() => {
-        // Now everything is loaded, initialize scripts, then hide the overlay after 2 seconds
         observeSection();
         setContactJs();
         setTimeout(() => {
             document.getElementById('loading-overlay').classList.add('hidden');
-            // Optionally, remove from DOM after fade-out:
             setTimeout(() => {
                 document.getElementById('loading-overlay').style.display = 'none';
-            }, 500); // Match the transition duration
+            }, 500);
         }, 3000);
         });
 });
