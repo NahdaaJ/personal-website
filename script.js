@@ -37,7 +37,7 @@ function observeSection() {
             }
         });
     }, {
-        threshold: 0.2
+        threshold: 0.5
     });
 
     sections.forEach(section => {

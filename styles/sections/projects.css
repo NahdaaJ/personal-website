@@ -84,3 +84,32 @@
         gap: 30px 0;
     }
 }
+
+@media screen and (max-width: 800px) {
+    #project-card-container {
+        grid-template-columns: 1fr;
+        gap: 30px 0;
+    }
+    .project-card {
+        flex-direction: column;
+        width: 300px;
+    }
+    .project-card-image {
+        width: 200px;
+        height: 200px;
+        align-self: center;
+        margin-bottom: 30px;
+    }
+
+    .project-title{
+        font-size: var(--medium-text-size);
+    }
+
+    .project-description {
+        font-size: var(--small-text-size);
+    }
+
+    .project-skills .skill {
+    font-size: var(--phone-small-size);
+    }
+}

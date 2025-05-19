@@ -101,3 +101,31 @@
         font-size: var(--medium-text-size);
     }
 }
+
+@media screen and (max-width: 800px) {
+    #experience-section {
+        margin-top: 100px;
+    }
+
+    .experience-card {
+        width: 90vw;
+        gap: 0;
+    }
+
+    .experience-date {
+        font-size: var(--tiny-text-size);
+    }
+
+    .experience-title {
+        font-size: var(--medium-text-size);
+    }
+
+    .experience-description, .experience-highlight {
+        font-size: var(--small-text-size);
+    }
+
+    .experience-skills .skill {
+        font-size: var(--phone-small-size);
+    }
+    
+}

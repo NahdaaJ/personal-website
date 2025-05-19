@@ -1,9 +1,9 @@
-/* contact page styling */
 #contact-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 #contact-content-container {
@@ -127,5 +127,33 @@
     #contact-links{
         gap: 12px;
     }
+}
 
+@media screen and (max-width: 800px) {
+    #contact-content-container{
+        padding: 0;
+        margin:0;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    #contact-title {
+        font-size: var(--heading2-size);
+    }
+
+    .contact-subtitle {
+        font-size: var(--medium-text-size);
+    }
+
+    .contact-input {
+        font-size: var(--small-text-size);
+    }
+
+    #form-row {
+        flex-direction: column;
+    }
+
+    #name, #email {
+        padding: 10px 20px;
+    }
 }
