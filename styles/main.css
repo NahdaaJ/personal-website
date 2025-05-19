@@ -1,5 +1,6 @@
 /* imports all css files */
 @import 'base.css';
+@import 'variables.css';
 @import 'components/nav.css';
 @import 'components/skills-tag.css';
 @import 'components/carousel.css';

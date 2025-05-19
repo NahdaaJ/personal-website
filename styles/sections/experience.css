@@ -1,6 +1,3 @@
-/* experience styling */
-@import '/styles/variables.css';
-
 #experience-section {
     display: flex;
     flex-direction: column;

@@ -1,6 +1,4 @@
 /* contact page styling */
-@import 'variables.css';
-
 #contact-section {
     display: flex;
     flex-direction: column;
@@ -92,8 +90,18 @@
     font-size: var(--small-text-size);
     font-weight: var(--thick-weight);
     border-radius: 20px;
+    border: solid 2px var(--pink);
     padding: 7px 20px;
-    border: none;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+#submit-button:hover {
+    background-color: var(--black);
+    border: solid 2px var(--pink);
+    color: var(--pink);
+
 }
 
 @media screen and (max-width: 1300px) {

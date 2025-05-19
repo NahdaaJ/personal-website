@@ -1,6 +1,3 @@
-/* home styling */
-@import '/styles/variables.css';
-
 #home-section {
     display: flex;
     flex-direction: column;
