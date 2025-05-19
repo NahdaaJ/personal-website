@@ -48,6 +48,8 @@ function observeSection() {
 function setContactJs(){
     document.getElementById('contact-form-content').addEventListener('submit', function(event) {
     event.preventDefault();
+    const submitButton = document.getElementById('submit-button');
+    submitButton.innerHTML = "sending";
 
     emailjs.send("service_8iaen8k", "template_hdidd1g", {
         name: document.getElementById("name").value,
@@ -57,8 +59,11 @@ function setContactJs(){
         time: new Date().toLocaleString('en-GB', { timeZone: 'Europe/London' })
     })
     .then(function(response) {
-        alert("Message sent successfully!");
+        submitButton.innerHTML = "sent! ❤";
         document.getElementById('contact-form-content').reset();
+        setTimeout(() => {
+            submitButton.innerHTML = "submit";
+        }, 3000);
     }, function(error) {
         alert("Failed to send message. Please try again.");
         console.error(error);
