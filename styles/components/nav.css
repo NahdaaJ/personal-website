@@ -12,6 +12,10 @@
     font-family: var(--accent-font);
 }
 
+.nav-links, #logo{
+    cursor: pointer;
+}
+
 #main-nav{
     display: flex;
     flex-direction: row;

@@ -16,6 +16,12 @@ function loadCards(containerId, filePaths) {
         .catch(error => console.error('Error loading experience cards:', error));
 }
 
+function scrollToSection(section) {
+    const targetSection = document.getElementById(section);
+    const y = targetSection.getBoundingClientRect().top + window.pageYOffset - 115;
+    window.scrollTo({ top: y, behavior: "smooth" });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     loadComponent('nav-container', 'section-content/nav.html');
     loadComponent('home-container', 'section-content/home.html');

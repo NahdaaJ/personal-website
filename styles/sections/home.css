@@ -7,7 +7,7 @@
     align-items: center;
     text-align: center;
     height: calc(100vh - 115px);
-    margin-top: 115px;
+    padding-top: 115px;
     font-family: var(--accent-font);
 }
 
