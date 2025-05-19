@@ -49,9 +49,9 @@
 
 @media screen and (max-width: 800px) {
   .carousel-heading {
-    height: 40px;
+    height: 45px;
   }
   .carousel-track {
-    font-size: var(--small-text-size);
+    font-size: var(--medium-text-size);
   }
 }
