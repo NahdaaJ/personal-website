@@ -28,11 +28,22 @@
     color: var(--pink);
 }
 
+#home-socials {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
 #home-subtitle {
     color: var(--light-grey);
     font-weight: var(--regular-weight);
     font-size: var(--heading2-size);
     width: 720px;
+}
+
+.home-social-icon{
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1080px) {
