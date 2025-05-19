@@ -10,14 +10,27 @@
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
         </head>
-
         <body>
             <div id="nav-container"></div>
             <div id="home-container"></div>
             <div id="experience-container"></div>
             <div id="projects-container"></div>
             <div id="contact-container"></div>
-        </body>
 
-        <script src="script.js"></script>
-    </html>
+            <!-- At the end of your <body> -->
+
+            <script type="text/javascript"
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+            </script>
+            <script type="text/javascript">
+            (function(){
+                emailjs.init({
+                    publicKey: "AARRKhE6QSJw9KXeR",
+                });
+            })();
+            </script>
+
+            </script>
+            <script src="script.js"></script>
+        </body>
+</html>

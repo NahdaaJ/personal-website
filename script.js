@@ -45,6 +45,29 @@ function observeSection() {
     });
 }
 
+function setContactJs(){
+    document.getElementById('contact-form-content').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.send("service_8iaen8k", "template_hdidd1g", {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+        time: new Date().toLocaleString('en-GB', { timeZone: 'Europe/London' })
+    })
+    .then(function(response) {
+        alert("Message sent successfully!");
+        document.getElementById('contact-form-content').reset();
+    }, function(error) {
+        alert("Failed to send message. Please try again.");
+        console.error(error);
+    });
+});
+}
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     loadComponent('nav-container', 'section-content/nav.html');
     loadComponent('home-container', 'section-content/home.html');
@@ -62,8 +85,8 @@ document.addEventListener('DOMContentLoaded', function () {
             'projects/default.html',
         ]);       
 
-        // Temp
         observeSection();
+        setContactJs()
         
     }, 200);
 });
