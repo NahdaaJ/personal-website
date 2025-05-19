@@ -1,5 +1,5 @@
 function loadComponent(containerId, filePath) {
-    fetch(filePath)
+    return fetch(filePath)
         .then(response => response.text())
         .then(html => {
             document.getElementById(containerId).innerHTML = html;
@@ -9,13 +9,12 @@ function loadComponent(containerId, filePath) {
 
 function loadCards(containerId, filePaths) {
     const container = document.getElementById(containerId);
-    Promise.all(filePaths.map(path => fetch(path).then(res => res.text())))
+    return Promise.all(filePaths.map(path => fetch(path).then(res => res.text())))
         .then(cards => {
             container.innerHTML = cards.join('');
         })
-        .catch(error => console.error('Error loading experience cards:', error));
+        .catch(error => console.error('Error loading cards:', error));
 }
-
 function scrollToSection(section) {
     const targetSection = document.getElementById(section);
     const y = targetSection.getBoundingClientRect().top + window.pageYOffset - 115;
@@ -71,30 +70,37 @@ function setContactJs(){
 });
 }
 
-
-
 document.addEventListener('DOMContentLoaded', function () {
-    loadComponent('nav-container', 'section-content/nav.html');
-    loadComponent('home-container', 'section-content/home.html');
-    loadComponent('experience-container', 'section-content/experience.html');
-    loadComponent('projects-container', 'section-content/projects.html');
-    loadComponent('contact-container', 'section-content/contact.html');
-
-    // Add new experience here
-    setTimeout(() => {
-        loadCards('experience-card-container', [
-            'experience/lexisnexis.html',
-            'experience/python-kickstarter.html',
-            'experience/university.html',
+    // Load all components
+    Promise.all([
+        loadComponent('nav-container', 'section-content/nav.html'),
+        loadComponent('home-container', 'section-content/home.html'),
+        loadComponent('experience-container', 'section-content/experience.html'),
+        loadComponent('projects-container', 'section-content/projects.html'),
+        loadComponent('contact-container', 'section-content/contact.html')
+    ]).then(() => {
+        // Now load cards
+        return Promise.all([
+            loadCards('experience-card-container', [
+                'experience/lexisnexis.html',
+                'experience/python-kickstarter.html',
+                'experience/university.html',
+            ]),
+            loadCards('project-card-container', [
+                'projects/stardewApi.html',
+                'projects/pomodoro-timer.html',
+            ])
         ]);
-
-        loadCards('project-card-container', [
-            'projects/stardewApi.html',
-            'projects/pomodoro-timer.html',
-        ]);       
-
+    }).then(() => {
+        // Now everything is loaded, initialize scripts, then hide the overlay after 2 seconds
         observeSection();
-        setContactJs()
-        
-    }, 200);
+        setContactJs();
+        setTimeout(() => {
+            document.getElementById('loading-overlay').classList.add('hidden');
+            // Optionally, remove from DOM after fade-out:
+            setTimeout(() => {
+                document.getElementById('loading-overlay').style.display = 'none';
+            }, 500); // Match the transition duration
+        }, 3000);
+        });
 });

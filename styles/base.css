@@ -8,6 +8,35 @@ body {
     width: 1080px;
 }
 
-/* #nav-container, #home-container{
-    display:none;
-} */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#loading-logo {
+    animation: pulse-opacity 2.1s ease-in-out infinite;
+    width: 150px;
+    height: 150px;
+}
+
+@keyframes pulse-opacity {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+
+#loading-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
