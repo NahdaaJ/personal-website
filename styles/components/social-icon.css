@@ -1,0 +1,11 @@
+.social-icon {
+    border-radius: 10px;
+    cursor: var(--cursor-click);
+    transition: all 0.2s ease-in-out;
+    height: 50px;
+    width: 50px;
+}
+
+.social-icon:hover {
+    filter: brightness(1.5);
+}

@@ -42,24 +42,13 @@
     width: 720px;
 }
 
-.home-social-icon{
-    border-radius: 10px;
-    cursor: var(--cursor-click);
-    transition: all 0.2s ease-in-out;
-}
-
-.home-social-icon:hover {
-    filter: brightness(1.5);
-}
-
 #home-socials {
     display: flex;
     flex-direction: row;
 }
 
-#home-socials img {
-    height: 50px;
-    width: 50px;
+#home-socials .social-icon {
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 1080px) {

@@ -1,0 +1,36 @@
+footer {
+    left:0;
+    right:0;
+    background-color: var(--dark-grey);
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+}
+
+footer a {
+    text-decoration: none;
+    cursor: var(--cursor);
+    margin: 0 5px;
+}
+
+footer p {
+    font-family: var(--base-font);
+    font-size: var(--base-text-size);
+    line-height: 5px;
+    color: var(--pink);
+    font-weight: var(--regular-weight);
+}
+
+@media screen and (max-width: 800px) {
+
+    footer {
+        justify-content: start;
+    }
+    footer a {
+        display: none;
+    }
+    
+}
