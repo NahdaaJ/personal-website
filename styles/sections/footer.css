@@ -1,13 +1,14 @@
 footer {
     left:0;
     right:0;
-    background-color: var(--dark-grey);
+    background-color: var(--black);
     height: 130px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 0 100px;
+    border-top: solid 1px var(--dark-grey);
 }
 
 footer a {
@@ -20,7 +21,7 @@ footer p {
     font-family: var(--base-font);
     font-size: var(--base-text-size);
     line-height: 5px;
-    color: var(--pink);
+    color: var(--dark-grey);
     font-weight: var(--regular-weight);
 }
 
