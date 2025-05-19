@@ -10,22 +10,20 @@
 .experience-card {
     display: flex;
     flex-direction: row;
-    width: 1000px;
-    margin-bottom: 100px;
-    
+    gap: 100px;
+    margin-bottom: 120px;
     transition: 0.3s ease all;
 }
 
-.experience-card:hover {
-    .experience-description {
-        color: var(--white);
-    }
+.experience-card:hover .experience-description,
+.experience-card:hover .experience-highlight {
+    color: var(--white);
 }
 
 .experience-card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .experience-date {
@@ -33,7 +31,15 @@
     font-family: var(--accent-font);
     font-size: var(--heading2-size);
     font-weight: var(--regular-weight);
-    width: 200%;
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 700px;
 }
 
 .experience-title {
@@ -41,15 +47,20 @@
     font-family: var(--accent-font);
     font-size: var(--heading2-size);
     font-weight: var(--regular-weight);
+    margin-bottom: -10px;
 }
 
-.experience-description {
+.experience-description,
+.experience-highlight {
     color: var(--light-grey);
     font-family: var(--base-font);
     font-size: var(--base-text-size);
     font-weight: var(--regular-weight);
-
     transition: 0.3s ease all;
+}
+
+.experience-highlight {
+    font-weight: var(--thick-weight);
 }
 
 .experience-skills {
@@ -63,17 +74,22 @@
     font-size: var(--small-text-size);
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1300px) {
     .experience-card {
         flex-direction: column;
-        width: 450px;
+        gap: 0;
+        width: 500px;
     }
 
     .experience-date {
-        width: 100%;
         line-height: 0;
-        margin-bottom: 0;
+        margin: 0;
         font-size: var(--small-text-size);
+    }
+
+    .experience-content {
+        margin: 0;
+        width: 100%;
     }
 
     .experience-title {

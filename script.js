@@ -37,7 +37,7 @@ function observeSection() {
             }
         });
     }, {
-        threshold: 0.7
+        threshold: 0.2
     });
 
     sections.forEach(section => {
@@ -83,7 +83,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add new experience here
     setTimeout(() => {
         loadCards('experience-card-container', [
-            'experience/default.html',
+            'experience/lexisnexis.html',
+            'experience/python-kickstarter.html',
+            'experience/university.html',
         ]);
 
         loadCards('project-card-container', [
