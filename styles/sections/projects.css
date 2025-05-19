@@ -38,7 +38,9 @@
 
 .project-card:hover {
     background-color: var(--dark-grey);
-    /* scale: 1.03; */
+    .link-arrow {
+        opacity: 1;
+    }
 }
 
 .project-card-image {
@@ -62,6 +64,7 @@
     font-weight: var(--regular-weight);
     margin-bottom: 5px;
 }
+
 
 .project-description {
     color: var(--light-grey);

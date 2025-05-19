@@ -21,6 +21,10 @@
     color: var(--white);
 }
 
+.experience-card:hover .link-arrow {
+    opacity: 1;
+}
+
 .experience-card-link {
     text-decoration: none;
     color: inherit;
