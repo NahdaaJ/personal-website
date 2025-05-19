@@ -30,6 +30,10 @@ footer p {
     footer {
         justify-content: start;
     }
+    footer p {
+        width: 250px;
+        font-size: var(--medium-text-size);
+    }
     footer a {
         display: none;
     }
