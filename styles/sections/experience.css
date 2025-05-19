@@ -15,6 +15,20 @@
     flex-direction: row;
     width: 1000px;
     margin-bottom: 100px;
+    
+    transition: 0.3s ease all;
+}
+
+.experience-card:hover {
+    .experience-description {
+        color: var(--white);
+    }
+}
+
+.experience-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .experience-date {
@@ -37,6 +51,8 @@
     font-family: var(--base-font);
     font-size: var(--base-text-size);
     font-weight: var(--regular-weight);
+
+    transition: 0.3s ease all;
 }
 
 .experience-skills {
