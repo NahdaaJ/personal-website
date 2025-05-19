@@ -19,13 +19,13 @@ function loadCards(containerId, filePaths) {
 document.addEventListener('DOMContentLoaded', function () {
     loadComponent('nav-container', 'section-content/nav.html');
     loadComponent('home-container', 'section-content/home.html');
-    loadComponent('experience-section', 'section-content/experience.html');
+    loadComponent('experience-container', 'section-content/experience.html');
     loadComponent('projects-container', 'section-content/projects.html');
     loadComponent('contact-container', 'section-content/contact.html');
 
     // Add new experience here
     setTimeout(() => {
-        loadCards('experience-container', [
+        loadCards('experience-card-container', [
             'experience/default.html',
         ]);
 

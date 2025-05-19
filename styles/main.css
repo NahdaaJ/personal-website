@@ -2,6 +2,7 @@
 @import 'base.css';
 @import 'components/nav.css';
 @import 'components/skills-tag.css';
+@import 'components/carousel.css';
 @import 'sections/home.css';
 @import 'sections/experience.css';
 @import 'sections/projects.css';

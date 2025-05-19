@@ -1,0 +1,49 @@
+.carousel-heading {
+  display: flex;
+  align-items: center; /* Vertically center children */
+  width: 100vw;
+  height: 80px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  background: var(--dark-grey);
+  
+  z-index: -1;
+  margin-bottom: 100px;
+}
+
+.carousel-track {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 30s linear infinite;
+
+    font-size: var(--medium-size);
+    font-family: var(--accent-font);
+    font-style: italic;
+}
+
+.carousel-track span {
+  display: inline-block;
+  color: var(--pink);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .carousel-heading {
+    height: 50px;
+  }
+  .carousel-track {
+    font-size: var(--base-text-size);
+  }
+    
+}
