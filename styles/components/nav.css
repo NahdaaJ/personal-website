@@ -10,6 +10,12 @@
 }
 .nav-links{
     font-family: var(--accent-font);
+    transition: 0.3s ease all;
+}
+
+.nav-links:hover,
+.nav-links.active{
+    color: var(--white);
 }
 
 .nav-links, #logo{

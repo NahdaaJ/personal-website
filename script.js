@@ -22,6 +22,29 @@ function scrollToSection(section) {
     window.scrollTo({ top: y, behavior: "smooth" });
 }
 
+function observeSection() {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-links");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const sectionId = entry.target.id;
+                const navLinkId = sectionId.replace('-section', '-link');
+                navLinks.forEach(link => link.classList.remove("active"));
+                const navLink = document.getElementById(navLinkId);
+                if (navLink) navLink.classList.add("active");
+            }
+        });
+    }, {
+        threshold: 0.7
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     loadComponent('nav-container', 'section-content/nav.html');
     loadComponent('home-container', 'section-content/home.html');
@@ -38,5 +61,9 @@ document.addEventListener('DOMContentLoaded', function () {
         loadCards('project-card-container', [
             'projects/default.html',
         ]);       
+
+        // Temp
+        observeSection();
+        
     }, 200);
 });
