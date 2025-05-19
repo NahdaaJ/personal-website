@@ -34,7 +34,7 @@
 
 .project-card:hover {
     background-color: var(--dark-grey);
-    scale: 1.03;
+    /* scale: 1.03; */
 }
 
 .project-card-image {
