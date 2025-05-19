@@ -26,7 +26,7 @@
     margin: 0 0 -10px 0;
 }
 
-#contact-subtitle {
+.contact-subtitle {
     color: var(--light-grey);
     font-weight: var(--regular-weight);
     font-size: var(--base-text-size);
