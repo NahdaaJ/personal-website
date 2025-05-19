@@ -28,7 +28,7 @@ footer p {
 @media screen and (max-width: 800px) {
 
     footer {
-        justify-content: start;
+        justify-content: center;
     }
     footer p {
         width: 250px;
