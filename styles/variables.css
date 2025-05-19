@@ -24,4 +24,9 @@
     --dark-grey:#312E2D;
     --black:#1F1C1B;
     --translucent-black: rgba(31, 28, 27, 0.7);
+
+    /* Cursor */
+    --cursor: url('/assets/cursor-outline.png'), auto;
+    --cursor-click: url('/assets/cursor.png'), pointer;
+    --cursor-text: url('/assets/cursor-text.png'), text;
 }

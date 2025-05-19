@@ -13,6 +13,7 @@
     gap: 100px;
     margin-bottom: 120px;
     transition: 0.3s ease all;
+    cursor: var(--cursor-click);
 }
 
 .experience-card:hover .experience-description,

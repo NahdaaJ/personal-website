@@ -17,7 +17,7 @@
 }
 
 .nav-links, #logo{
-    cursor: pointer;
+    cursor: var(--cursor-click);
 }
 
 #main-nav{

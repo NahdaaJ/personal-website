@@ -31,6 +31,10 @@
     gap: 12px;
 }
 
+#home-socials a {
+    cursor: var(--cursor);
+}
+
 #home-subtitle {
     color: var(--light-grey);
     font-weight: var(--regular-weight);
@@ -40,7 +44,12 @@
 
 .home-social-icon{
     border-radius: 10px;
-    cursor: pointer;
+    cursor: var(--cursor-click);
+    transition: all 0.2s ease-in-out;
+}
+
+.home-social-icon:hover {
+    filter: brightness(1.5);
 }
 
 #home-socials {

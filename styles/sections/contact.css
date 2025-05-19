@@ -37,11 +37,22 @@
     gap: 20px;
 }
 
+#contact-links a{
+    cursor: var(--cursor);
+}
+
 
 .contact-social-icon {
     width: 50px;
     height: 50px;
     margin-top: 10px;
+    border-radius: 10px;
+    cursor: var(--cursor-click);
+    transition: all 0.2s ease-in-out;
+}
+
+.contact-social-icon:hover {
+    filter: brightness(1.5);
 }
 
 #contact-form-content{
@@ -67,6 +78,7 @@
     padding: 0 20px;
     font-family: var(--accent-font);
     font-size: var(--small-text-size);
+    cursor: var(--cursor-text);
 }
 
 .contact-input::placeholder {
@@ -92,7 +104,7 @@
     border-radius: 20px;
     border: solid 2px var(--pink);
     padding: 7px 20px;
-    cursor: pointer;
+    cursor: var(--cursor-click);
 
     transition: all 0.2s ease;
 }
