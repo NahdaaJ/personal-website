@@ -72,21 +72,22 @@ function setContactJs(){
 
 document.addEventListener('DOMContentLoaded', function () {
     Promise.all([
-        loadComponent('nav-container', 'section-content/nav.html'),
-        loadComponent('home-container', 'section-content/home.html'),
-        loadComponent('experience-container', 'section-content/experience.html'),
-        loadComponent('projects-container', 'section-content/projects.html'),
-        loadComponent('contact-container', 'section-content/contact.html')
+        loadComponent('nav-container', 'src/components/nav/nav.html'),
+        loadComponent('home-container', 'src/sections/home/home.html'),
+        loadComponent('experience-container', 'src/sections/experience/experience.html'),
+        loadComponent('projects-container', 'src/sections/projects/projects.html'),
+        loadComponent('contact-container', 'src/sections/contact/contact.html'),
+        loadComponent('footer', 'src/components/footer/footer.html')
     ]).then(() => {
         return Promise.all([
             loadCards('experience-card-container', [
-                'experience/lexisnexis.html',
-                'experience/python-kickstarter.html',
-                'experience/university.html',
+                'src/sections/experience/cards/lexisnexis.html',
+                'src/sections/experience/cards/python-kickstarter.html',
+                'src/sections/experience/cards/university.html',
             ]),
             loadCards('project-card-container', [
-                'projects/stardewApi.html',
-                'projects/pomodoro-timer.html',
+                'src/sections/projects/cards/stardewApi.html',
+                'src/sections/projects/cards/pomodoro-timer.html',
             ])
         ]);
     }).then(() => {

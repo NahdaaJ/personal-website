@@ -72,6 +72,8 @@
     font-family: var(--accent-font);
     font-size: var(--small-text-size);
     cursor: var(--cursor-text);
+
+    resize: none;
 }
 
 .contact-input::placeholder {
