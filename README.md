@@ -1,6 +1,6 @@
 # Web Portfolio Project ♡
 <div align="centre">
-  <a href="https://nahdaajawed.com">
+  <a href="https://nahdaajawed.com" target="_blank">
     <img src="https://img.shields.io/badge/Nahdaa%20Jawed%20Portfolio-Visit-C08585?style=for-the-badge" alt="Visit Badge"/>
   </a>
 </div>
