@@ -1,49 +1,70 @@
-# Web Portfolio Project 🌸
-🎀<a href="https://nahdaajawed.com/" target="_blank">nahdaajawed.com</a>🎀
+# Web Portfolio Project ♡
+<div align="centre">
+  <a href="https://nahdaajawed.com">
+    <img src="https://img.shields.io/badge/Nahdaa%20Jawed%20Portfolio-Visit-C08585?style=for-the-badge" alt="Visit Badge"/>
+  </a>
+</div>
 
 </div>
 
-**Hey there! ヾ(＾∇＾)** Welcome to my WIP personal portfolio. I'm a junior software developer delving into the world of web dev for fun! This project is my playground, where I experiment, learn, and showcase my skills.
+**Hey there! ♡** Welcome to my personal portfolio repo. I'm a junior software engineer practicing different disciplines of software engineering! This project is my playground where I experiment, learn, and showcase my skills!
 
-## Project Goals
-
-🌸 **Learn and Grow:** - This project is about continuous learning and improvement! I'm constantly challenging myself to explore new technologies and techniques.
-<br/>
-🌸 **Showcase Skills** - I aim to demonstrate my abilities as a web developer through this portfolio!
-<br/>
-🌸 **Have Fun!** - The real aim of this project is to have a good time! I love mixing programming and creativity together!
 
 ## What's Inside?
-- [`index.html`](index.html): The main HTML file for the website, including all the sections and navigation bar!
-- [`components/`](components/):  This directory hosts all the different components and their styling that come together to create the site!
-  - [`components/homepage`](components/homepage/):  This directory contains the html and css for the **homepage** section.
-  - [`components/about-me`](components/about-me/):  This directory contains the html and css for the **about-me** section.
-  - [`components/experience`](components/about-me/):  This directory contains the html and css for the **experience** section.
-  - [`components/about-me`](components/projects/):  This directory contains the html and css for the **projects** section.
-  - [`components/about-me`](components/contact/):  This directory contains the html and css for the **contact** section.
-- [`styles/`](styles/): The main CSS file for styling the website.
-  -  [`styles/base/`](styles/base/): In this directory, I store important variables and styling that is used throughout every component.
-  -  [`styles/responsive/`](styles/responsive/): All the CSS files that correspond to different screen sizes are found here.
-- [`scripts/index.js`](scripts/index.js): The main JavaScript file for adding interactivity to the website.
-- [`images/`](images/): Directory containing images used in the website, some of which were drawn by me!
-- [`icons/`](icons/): Directory containing icons used in the website.
+- [`index.html`](index.html): The main HTML entry point for the website.
+- [`script.js`](script.js): Main JavaScript file for dynamic loading and interactivity.
+- [`assets/`](assets/): Images, icons, and custom cursors used throughout the site.
+- [`src/components/`](src/components/): Reusable UI components.
+  - [`src/components/nav/`](src/components/nav/): Navigation bar HTML, CSS, and JS.
+  - [`src/components/footer/`](src/components/footer/): Footer bar HTML, CSS, and JS.
+- [`src/sections/`](src/sections/): Main content sections of the site.
+  - [`src/sections/home/`](src/sections/home/): Homepage section.
+  - [`src/sections/experience/`](src/sections/experience/): Experience section and cards.
+    - [`src/sections/experience/cards/`](src/sections/experience/cards/): Individual experience cards.
+    - [`src/sections/experience/images/`](src/sections/experience/images/): Images for experience cards.
+  - [`src/sections/projects/`](src/sections/projects/): Projects section and cards.
+    - [`src/sections/projects/cards/`](src/sections/projects/cards/): Individual project cards.
+    - [`src/sections/projects/images/`](src/sections/projects/images/): Images for project cards.
+  - [`src/sections/contact/`](src/sections/contact/): Contact section and form.
+- [`styles/`](styles/): Global and shared CSS files.
+  - [`styles/base.css`](styles/base.css): Base styles for the site.
+  - [`styles/variables.css`](styles/variables.css): CSS variables for colors, fonts, and cursors.
+  - [`styles/main.css`](styles/main.css): Main stylesheet that imports all others.
+- [`legacy/`](legacy/): Previous versions and experiments.
 
-## Current Progress
+## Adding Cards
 
-This project is a work in progress! I have no set deadline for when I aim to finish this project, and will be taking it at my own pace!! Even after "finishing", I will be maintaining and updating the site with better/cooler features! ♡( •ॢ◡-ॢ)✧˖° ♡
+### Experience Cards
+1. Duplicate the default card at [`src/sections/experience/cards`](src/sections/experience/cards/), and make the following changes:
+    - Change link and `aria-label` on line 1,
+    - Change date on line 3,
+    - Change job title/company on line 5,
+    - Add job description on line 6,
+    - Change/Add/Remove skills on line 13+ and change aria label of all skills on line 12.
+2. In [`script.js`](script.js) add the path to your new experience card on line 83. <strong>Order matters.</strong>
 
-I have just finished adding the `About Me` section and it's responsiveness! However, I don't think I'm utilising CSS grid and flexbox in the best way I can, so I will be attempting that with current sections and the next section on the agenda, `Projects`.
+### Project Cards
+1. Duplicate the default card at [`src/sections/projects/cards`](src/sections/projects/cards/), and make the following changes:
+    - Change link on line 1,
+    - Change image source and alt text on line 3,
+    - Change project title and aria label on line 5,
+    - Add project description on line 6,
+    - Change/Add/Remove skills on line 10+ and change aria label of all skills on line 9.
+2. In [`script.js`](script.js) add the path to your new experience card on line 88. <strong>Order matters.</strong>
 
-## Get in Touch! 🌸
+## Get in Touch!
 
-I'd love to hear from you! Whether you have feedback, suggestions, or just want to say hi, don't hesitate to reach out! (^∇^)/ ᵇʸᵉ
+If you have come across this repo, I'd love to hear from you! Whether you have feedback, suggestions, or just want to say hi, don't hesitate to reach out! ♡
 <div align=center>
-  <a href="https://www.linkedin.com/in/nahdaa-jawed/">
-    <img src="https://img.shields.io/badge/LinkedIn-FFB3C6?logo=linkedin&logoColor=white&style=for-the-badge" alt="LinkedIn     Badge"/>
-  </a>
-  <a href="mailto:nahdaajawed@gmail.com">
-    <img src="https://img.shields.io/badge/Email-FFB3C6?logo=gmail&logoColor=white&style=for-the-badge" alt="Email Badge"/>
-  </a>
+    <a href="https://www.linkedin.com/in/nahdaa-jawed/" target="_blank">
+        <img src="/assets/icons/linkedin.png" alt="LinkedIn" style="height:50px" >
+    </a>
+    <a href="https://github.com/NahdaaJ" target="_blank">
+        <img src="/assets/icons/github.png" alt="GitHub" style="height:50px" >
+    </a>
+    <a href="mailto:nahdaajawed@gmail.com?subject=%F0%9F%90%B0%20Reaching%20Out%20From%20Your%20Portfolio&body=Just%20hopping%20by%20to%20say%20hi%20and%20get%20in%20touch!">
+        <img src="/assets/icons/email.png" alt="Email" style="height:50px" >
+    </a>
 </div>
 
 
