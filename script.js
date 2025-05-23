@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
             loadCards('project-card-container', [
                 'src/sections/projects/cards/stardewApi.html',
                 'src/sections/projects/cards/pomodoro-timer.html',
+                'src/sections/projects/cards/cosyshelf.html',
             ])
         ]);
     }).then(() => {
