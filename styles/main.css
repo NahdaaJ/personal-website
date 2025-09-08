@@ -7,6 +7,7 @@
 @import '../src/components/link-arrow/link-arrow.css';
 @import '../src/components/social-icons/social-icon.css';
 @import '../src/components/footer/footer.css';
+@import '../src/components/contact-input/contact-input.css';
 
 @import '../src/sections/home/home.css';
 @import '../src/sections/experience/experience.css';

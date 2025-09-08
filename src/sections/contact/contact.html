@@ -32,11 +32,23 @@
         <div id="contact-form">
             <form id="contact-form-content" aria-label="Contact Form">
                 <div id="form-row">
-                    <input class="contact-input" type="text" id="name" name="name" placeholder="name" required>
-                    <input class="contact-input" type="email" id="email" name="email" placeholder="email" required>
+                    <div class="input-group">
+                        <input class="contact-input" type="text" id="name" name="name" placeholder="name" required>
+                        <p class="contact-input-label">name</p>
+                    </div>
+                    <div class="input-group">
+                        <input class="contact-input" type="email" id="email" name="email" placeholder="email" required>
+                        <p class="contact-input-label">email</p>
+                    </div>
                 </div>
-                <input class="contact-input" type="text" id="subject" name="subject" placeholder="subject" required>
-                <textarea class="contact-input" id="message" name="message" placeholder="message" required></textarea>
+                <div class="input-group full-row-input">
+                    <input class="contact-input" type="text" id="subject" name="subject" placeholder="subject" required>
+                    <p class="contact-input-label">subject</p>
+                </div>
+                <div class="input-group full-row-input">
+                    <textarea class="contact-input" id="message" name="message" placeholder="message" required></textarea>
+                    <p class="contact-input-label">message</p>
+                </div>
                 <button id="submit-button" type="submit">submit</button>
             </form>
         </div>
