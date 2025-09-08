@@ -1,0 +1,49 @@
+.contact-input {
+    background-color: transparent;
+    border: solid 2px var(--light-grey);
+    color: var(--pink);
+    border-radius: 40px;
+    height: 40px;
+    padding: 0 20px;
+    font-family: var(--accent-font);
+    font-size: var(--small-text-size);
+    cursor: var(--cursor-text);
+    width: 100%;
+
+    resize: none;
+    transition: border 0.1s ease;
+}
+
+.contact-input-label {
+    font-family: var(--accent-font);
+    font-size: var(--small-text-size);
+    color: var(--light-grey);
+    position: absolute;
+    margin: 11px 16px;
+    pointer-events: none;
+    background-color: var(--black);
+    padding: 0 5px;
+
+    transition: all 0.2s ease;
+    border-radius: 10px;
+}
+
+.contact-input:focus {
+    outline: none;
+    border: solid 2px var(--white);
+}
+
+.contact-input:focus + .contact-input-label {
+    transform: translateY(-23px);
+    color: var(--white);
+}
+
+.contact-input:focus + .contact-input-label,
+.contact-input:not(:placeholder-shown) + .contact-input-label {
+    transform: translateY(-23px);
+    color: var(--white);
+}
+
+.contact-input::placeholder {
+    color: transparent;
+}
