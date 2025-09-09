@@ -2,16 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    height: calc(100vh - 115px);
-    padding-top: 115px;
+    height: 100vh;
     font-family: var(--accent-font);
 }
 
 #home-logo {
     height: 300px;
     width: 300px;
-    margin-top: 115px;
 }
 
 #home-title {
@@ -29,6 +28,8 @@
     display: flex;
     flex-direction: row;
     gap: 12px;
+    align-items: center;
+    justify-content: center;
 }
 
 #home-socials a {
