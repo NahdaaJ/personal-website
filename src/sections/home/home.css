@@ -70,6 +70,27 @@
     margin-top: 10px;
 }
 
+#linkedin-home {
+    animation: bounce 4s ease-in-out infinite;
+}
+
+#github-home {
+    animation: bounce 4s ease-in-out infinite 1s;
+}
+
+#email-home {
+    animation: bounce 4s ease-in-out infinite 2s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
 @media screen and (max-width: 1080px) {
     #home-title{
         font-size: var(--medium-size);
