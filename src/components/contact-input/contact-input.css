@@ -1,5 +1,5 @@
 .contact-input {
-    background-color: transparent;
+    background-color: var(--black);
     border: solid 2px var(--light-grey);
     color: var(--pink);
     border-radius: 40px;

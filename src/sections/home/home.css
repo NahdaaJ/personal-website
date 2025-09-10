@@ -17,11 +17,29 @@
     color: var(--white);
     font-weight: var(--regular-weight);
     font-size: var(--heading1-size);
-    margin: 10px 0 -20px 0;
+    margin: 10px auto -20px auto;
+    border-right: var(--pink) 3px solid;
+    overflow: hidden;
+    white-space: nowrap;
+    width: fit-content;
+ 
+    animation: 
+        typing 2.3s steps(17, end) 3s,
+        blink-caret .75s step-end infinite 3s;
 }
 
 #home-title span {
     color: var(--pink);
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--pink); }
 }
 
 #home-socials {
@@ -50,6 +68,27 @@
 
 #home-socials .social-icon {
     margin-top: 10px;
+}
+
+#linkedin-home {
+    animation: bounce 4s ease-in-out infinite;
+}
+
+#github-home {
+    animation: bounce 4s ease-in-out infinite 1s;
+}
+
+#email-home {
+    animation: bounce 4s ease-in-out infinite 2s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 @media screen and (max-width: 1080px) {
