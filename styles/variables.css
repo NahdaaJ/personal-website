@@ -24,6 +24,7 @@
     --dark-grey:#312E2D;
     --black:#1F1C1B;
     --translucent-black: rgba(31, 28, 27, 0.7);
+    --translucent-grey: #312e2d42;
 
     /* Cursor */
     --cursor: url('/assets/cursors/cursor-outline.png'), auto;

@@ -1,0 +1,53 @@
+[
+    {
+        "id": "stardewapi",
+        "title": "stardew API",
+        "description": "Stardew API is a modern RESTful web service built with .NET 8 and ASP.NET Core, designed to provide comprehensive data for Stardew Valley enthusiasts and developers!",
+        "imageSrc": "stardew-project-pic.png",
+        "link": "https://stardewapi.co/",
+        "technologies": 
+        [
+            "C#",
+            ".NET 8.0",
+            "ASP.NET Core",
+            "Azure Web Apps",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "xUnit"
+        ]
+    },
+    {
+        "id": "pomodoro-timer",
+        "title": "pomodoro timer",
+        "description": "Pomodoro Timer is a simple desktop companion for focused work and mindful breaks! Designed with a minimalist theme, this app helps the user power through study sessions and recharge with motivational quotes and gentle reminders.",
+        "imageSrc": "pomodoro-timer.png",
+        "link": "https://github.com/NahdaaJ/pomodoro-timer",
+        "technologies": 
+        [
+            "C#",
+            ".NET 8.0",
+            "WPF",
+            "XAML"
+        ]
+    },
+    {
+        "id": "budgetboo",
+        "title": "budgetboo",
+        "description": "BudgetBoo is a desktop finance tracker app that helps you track expenses, manage budgets, and make sense of your spending! This project is currently in its early stages. ♡",
+        "imageSrc": "ghost.png",
+        "link": "https://github.com/NahdaaJ/budgetboo",
+        "technologies": 
+        [
+            "C# .NET 8.0",
+            "ASP.NET Core",
+            "Entity Framework Core",
+            "SQLite",
+            "Electron",
+            "React",
+            "TypeScript",
+            "HTML CSS",
+            "JavaScript"
+        ]
+    }
+]

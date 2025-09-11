@@ -1,3 +1,57 @@
+function createProjectCard(first, id, title, description, link, imgSrc, technologies) {
+    const projectCard = document.createElement('div');
+    projectCard.className = 'project-card';
+    projectCard.id = id;
+    projectCard.setAttribute('expand', first ? 'true' : 'false');
+    projectCard.onclick = function() { expandCard(id); };
+
+    const projectTitle = document.createElement('h1');
+    projectTitle.textContent = title;
+
+    const projectOuterContent = document.createElement('div');
+    projectOuterContent.className = 'project-outer-content';
+
+    const projectImage = document.createElement('img');
+    projectImage.src = `/src/sections/projects/images/${imgSrc}`;
+    console.log(projectImage.src)
+    projectImage.className = 'project-card-image';
+    projectImage.alt = title;
+
+    const projectInnerContent = document.createElement('div');
+    projectInnerContent.className = 'project-inner-content';
+
+    const projectDescription = document.createElement('h2');
+    projectDescription.textContent = description;
+
+    const projectSkills = document.createElement('div');
+    projectSkills.className = 'project-skills';
+
+    for (const tech of technologies) {
+        const techElement = document.createElement('span');
+        techElement.className = 'skill';
+        techElement.textContent = tech;
+        projectSkills.appendChild(techElement);
+    }
+
+    projectInnerContent.appendChild(projectDescription);
+    projectInnerContent.appendChild(projectSkills);
+
+    projectOuterContent.appendChild(projectImage);
+    projectOuterContent.appendChild(projectInnerContent);
+
+    projectCard.appendChild(projectTitle);
+    projectCard.appendChild(projectOuterContent);
+
+    console.log(projectCard)
+
+    return projectCard;
+}
+
+function appendProjectCard(card) {
+    console.log(document.getElementById('project-card-container'))
+    document.getElementById('project-card-container').appendChild(card);
+}
+
 function loadComponent(containerId, filePath) {
     return fetch(filePath)
         .then(response => response.text())
@@ -78,20 +132,27 @@ document.addEventListener('DOMContentLoaded', function () {
         loadComponent('projects-container', 'src/sections/projects/projects.html'),
         loadComponent('contact-container', 'src/sections/contact/contact.html'),
         loadComponent('footer', 'src/components/footer/footer.html')
-    ]).then(() => {
+    ])
+    .then(() => {
         return Promise.all([
             loadCards('experience-card-container', [
                 'src/sections/experience/cards/lexisnexis.html',
                 'src/sections/experience/cards/python-kickstarter.html',
                 'src/sections/experience/cards/university.html',
             ]),
-            loadCards('project-card-container', [
-                'src/sections/projects/cards/stardewApi.html',
-                'src/sections/projects/cards/pomodoro-timer.html',
-                'src/sections/projects/cards/cosyshelf.html',
-                'src/sections/projects/cards/budgetboo.html',
-            ])
         ]);
+        
+    }).then(() => {
+        fetch('src/data/projects.json')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(project => {
+                    const isFirst = data.indexOf(project) === 0 
+                    const card = createProjectCard(isFirst, project.id, project.title, project.description, project.link, project.imageSrc, project.technologies);
+                    appendProjectCard(card);
+                });
+            })
+            .catch(error => console.error('Error loading JSON:', error));
     }).then(() => {
         observeSection();
         setContactJs();
@@ -103,3 +164,20 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 3000);
         });
 });
+
+function expandCard(cardID) {
+    checkCardExpansion();
+    const card = document.getElementById(cardID);
+    const isExpanded = card.getAttribute("expand") === "true";
+    card.setAttribute("expand", isExpanded ? "false" : "true");
+}
+
+function checkCardExpansion() {
+    const cards = document.querySelectorAll(".project-card");
+    cards.forEach(card => {
+        const isExpanded = card.getAttribute("expand") === "true";
+        if (isExpanded) {
+            card.setAttribute("expand", "false");
+        }
+    });
+}
