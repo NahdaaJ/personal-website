@@ -1,0 +1,14 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Spotify Callback</title>
+<style>body{font-family:system-ui;margin:2rem;color:#eee;background:#111} code{background:#222;padding:.25rem .5rem;border-radius:.25rem}</style>
+<h1>Spotify code</h1>
+<p>Copy this code and paste it into the token script:</p>
+<pre id="out">Waiting…</pre>
+<script>
+  const p = new URLSearchParams(location.search);
+  const code = p.get("code");
+  const error = p.get("error");
+  document.getElementById("out").textContent = error ? ("Error: " + error) :
+    (code ? code : "No code in URL.");
+</script>
